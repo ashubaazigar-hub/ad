@@ -1,133 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank Nifty Expert</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts for premium look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #030f0c;
-        }
-        /* Custom glow effects to match the UI */
-        .glow-green {
-            box-shadow: 0 0 30px rgba(0, 230, 153, 0.25);
-        }
-        .glow-btn {
-            box-shadow: 0 0 25px rgba(0, 230, 153, 0.5);
-        }
-        .glow-footer {
-            box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
-        }
-        /* Custom radial background to mimic the image aura */
-        .bg-radial-gradient {
-            background: radial-gradient(circle at top, #0a2d21 0%, #030f0c 70%);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bank Nifty Expert</title>
+
+<!-- Meta Pixel Code यहाँ पेस्ट करें -->
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#06130f;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.card{
+width:100%;
+max-width:420px;
+background:#0d2019;
+border-radius:25px;
+padding:25px;
+text-align:center;
+box-shadow:0 0 30px rgba(0,255,170,.2);
+border:1px solid #1f5c45;
+}
+
+.dp{
+width:110px;
+height:110px;
+border-radius:50%;
+border:4px solid #00ff99;
+object-fit:cover;
+margin:auto;
+display:block;
+}
+
+h1{
+color:#fff;
+margin-top:18px;
+font-size:30px;
+}
+
+.green{
+color:#00ff99;
+}
+
+p{
+color:#ccc;
+margin-top:10px;
+font-size:15px;
+}
+
+.box{
+display:flex;
+justify-content:space-between;
+margin-top:25px;
+gap:10px;
+}
+
+.item{
+flex:1;
+background:#132b22;
+padding:15px;
+border-radius:12px;
+}
+
+.item h2{
+color:#00ff99;
+font-size:20px;
+}
+
+.item span{
+color:#ddd;
+font-size:12px;
+}
+
+.join{
+display:block;
+margin-top:25px;
+background:#00ff99;
+color:#000;
+padding:16px;
+border-radius:15px;
+font-size:18px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.join:hover{
+background:#00dd88;
+}
+
+.timer{
+margin-top:20px;
+color:#ffcc00;
+font-size:18px;
+font-weight:bold;
+}
+
+.footer{
+margin-top:25px;
+color:#888;
+font-size:12px;
+}
+</style>
 </head>
-<body class="text-white min-h-screen flex justify-center items-center p-4 bg-radial-gradient">
+<body>
 
-    <!-- Card Wrapper (Simulating mobile preview container layout) -->
-    <div class="w-full max-w-md bg-[#041611]/80 backdrop-blur-md rounded-[32px] border border-emerald-950/40 p-6 flex flex-col items-center shadow-2xl relative overflow-hidden my-6">
-        
-        <!-- Top Glow Aura -->
-        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="card">
 
-        <!-- Logo Header -->
-        <div class="w-24 h-24 rounded-full bg-[#11221d] border-2 border-[#00e699] flex flex-col justify-center items-center shadow-lg glow-green mb-6 z-10">
-            <span class="text-xs tracking-widest uppercase opacity-70 text-emerald-400 font-bold">Bank</span>
-            <span class="text-sm font-extrabold italic text-white tracking-tight -mt-1">Nifty</span>
-        </div>
+<img src="YOUR_DP_LINK" class="dp" alt="Profile">
 
-        <!-- Main Heading -->
-        <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide text-center uppercase mb-2">
-            BANK NIFTY <span class="text-[#00e699]">EXPERT</span>
-        </h1>
+<h1>BANK NIFTY <span class="green">EXPERT</span></h1>
 
-        <!-- Subtitle -->
-        <p class="text-xs md:text-sm text-center text-emerald-100/60 font-medium tracking-wide max-w-[280px] mb-6">
-            Fast & Accurate Market Analysis • Nifty • Bank Nifty • Options Trading
-        </p>
+<p>India's Trusted Telegram Channel</p>
 
-        <!-- Stats Counter Section -->
-        <div class="grid grid-cols-3 gap-3 w-full mb-5">
-            <!-- Stat 1 -->
-            <div class="bg-[#062018]/60 border border-emerald-900/40 rounded-xl p-3 text-center">
-                <div class="text-[#00e699] font-extrabold text-base">60K+</div>
-                <div class="text-[10px] text-gray-400 font-medium mt-0.5">Members</div>
-            </div>
-            <!-- Stat 2 -->
-            <div class="bg-[#062018]/60 border border-emerald-900/40 rounded-xl p-3 text-center">
-                <div class="text-[#00e699] font-extrabold text-base">SEBI</div>
-                <div class="text-[10px] text-gray-400 font-medium mt-0.5">Registered</div>
-            </div>
-            <!-- Stat 3 -->
-            <div class="bg-[#062018]/60 border border-emerald-900/40 rounded-xl p-3 text-center">
-                <div class="text-[#00e699] font-extrabold text-base">FREE</div>
-                <div class="text-[10px] text-gray-400 font-medium mt-0.5">Join</div>
-            </div>
-        </div>
-
-        <!-- Categories / Features Tags Grid -->
-        <div class="grid grid-cols-2 gap-3 w-full mb-6">
-            <div class="bg-[#07241b]/40 border border-emerald-900/30 rounded-xl py-3 px-4 flex items-center justify-center gap-2">
-                <span>📈</span>
-                <span class="text-xs font-semibold tracking-wide text-gray-200">Nifty Calls</span>
-            </div>
-            <div class="bg-[#07241b]/40 border border-emerald-900/30 rounded-xl py-3 px-4 flex items-center justify-center gap-2">
-                <span>🏦</span>
-                <span class="text-xs font-semibold tracking-wide text-gray-200">Bank Nifty</span>
-            </div>
-            <div class="bg-[#07241b]/40 border border-emerald-900/30 rounded-xl py-3 px-4 flex items-center justify-center gap-2">
-                <span>💹</span>
-                <span class="text-xs font-semibold tracking-wide text-gray-200">Finnifty</span>
-            </div>
-            <div class="bg-[#07241b]/40 border border-emerald-900/30 rounded-xl py-3 px-4 flex items-center justify-center gap-2">
-                <span>📊</span>
-                <span class="text-xs font-semibold tracking-wide text-gray-200">Swing Trades</span>
-            </div>
-        </div>
-
-        <!-- Primary Call To Action Button -->
-        <a href="https://t.me/your_channel" target="_blank" class="w-full bg-[#00e699] hover:bg-[#00cc88] text-[#030f0c] font-extrabold text-sm md:text-base py-4 rounded-2xl flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] duration-200 glow-btn tracking-wider uppercase mb-6">
-            🚀 Join Telegram Free
-        </a>
-
-        <!-- Feature Details Panel -->
-        <div class="w-full bg-[#051c15]/50 border border-emerald-900/30 rounded-2xl p-4 space-y-3.5 mb-6">
-            <div class="flex items-start gap-2.5">
-                <span class="text-sm mt-0.5">🔥</span>
-                <p class="text-xs text-gray-300 font-medium leading-relaxed">
-                    Daily Market Research & High Probability Trade Setups
-                </p>
-            </div>
-            <div class="flex items-start gap-2.5">
-                <span class="text-sm mt-0.5">⚡</span>
-                <p class="text-xs text-gray-300 font-medium leading-relaxed">
-                    Bank Nifty • Nifty • Options Trading Signals
-                </p>
-            </div>
-            <div class="flex items-start gap-2.5">
-                <span class="text-sm mt-0.5">🚀</span>
-                <p class="text-xs text-gray-300 font-medium leading-relaxed">
-                    Trusted by 60,000+ Traders
-                </p>
-            </div>
-        </div>
-
-        <!-- Footer Agency Banner -->
-        <div class="w-full bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-500 text-white rounded-xl p-3 text-center glow-footer text-[11px] font-bold tracking-wider uppercase">
-            🔥 Ads by <span class="underline decoration-white/50 underline-offset-2">ADSBUID AGENCY</span> 🚀 Instant Growth
-        </div>
-
+<div class="box">
+    <div class="item">
+        <h2>60K+</h2>
+        <span>Members</span>
     </div>
+
+    <div class="item">
+        <h2>FREE</h2>
+        <span>Signals</span>
+    </div>
+
+    <div class="item">
+        <h2>LIVE</h2>
+        <span>Support</span>
+    </div>
+</div>
+
+<p style="margin-top:25px;">
+✅ Bank Nifty Calls<br>
+✅ Nifty Calls<br>
+✅ Option Trading<br>
+✅ Intraday Support
+</p>
+
+<a class="join" href="YOUR_TELEGRAM_LINK">
+🚀 JOIN TELEGRAM FREE
+</a>
+
+<div class="timer">
+Offer Ends In <span id="count">10</span> Seconds
+</div>
+<script>
+let time = 10;
+const count = document.getElementById("count");
+
+const timer = setInterval(function () {
+    time--;
+    count.innerHTML = time;
+
+    if (time <= 0) {
+        clearInterval(timer);
+        window.location.href = "YOUR_TELEGRAM_LINK";
+    }
+}, 1000);
+</script>
+
+<div class="footer">
+© 2026 Bank Nifty Expert | All Rights Reserved
+</div>
+
+</div>
 
 </body>
 </html>
