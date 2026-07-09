@@ -1,119 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Share Market Pro</title>
-
-<!-- Meta Pixel Code yahan paste karna -->
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{
-background:#0d1117;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-color:#fff;
-}
-.card{
-width:90%;
-max-width:380px;
-background:#161b22;
-padding:25px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 0 20px rgba(255,215,0,.2);
-}
-img{
-width:110px;
-height:110px;
-border-radius:50%;
-border:3px solid gold;
-margin-bottom:15px;
-}
-h1{
-color:gold;
-font-size:28px;
-margin-bottom:8px;
-}
-p{
-color:#ccc;
-margin-bottom:15px;
-}
-.timer{
-font-size:38px;
-color:#00ff99;
-font-weight:bold;
-margin:20px 0;
-}
-.btn{
-display:block;
-width:100%;
-padding:15px;
-margin:10px 0;
-text-decoration:none;
-border-radius:10px;
-font-size:18px;
-font-weight:bold;
-}
-.join{
-background:#00c853;
-color:#fff;
-}
-.backup{
-background:#2962ff;
-color:#fff;
-}
-.footer{
-margin-top:15px;
-font-size:13px;
-color:#888;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Nifty Expert</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts for premium look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030f0c;
+        }
+        /* Custom glow effects to match the UI */
+        .glow-green {
+            box-shadow: 0 0 30px rgba(0, 230, 153, 0.25);
+        }
+        .glow-btn {
+            box-shadow: 0 0 25px rgba(0, 230, 153, 0.5);
+        }
+        .glow-footer {
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.4);
+        }
+        /* Custom radial background to mimic the image aura */
+        .bg-radial-gradient {
+            background: radial-gradient(circle at top, #0a2d21 0%, #030f0c 70%);
+        }
+    </style>
 </head>
+<body class="text-white min-h-screen flex justify-center items-center p-4 bg-radial-gradient">
 
-<body>
+    <!-- Card Wrapper (Simulating mobile preview container layout) -->
+    <div class="w-full max-w-md bg-[#041611]/80 backdrop-blur-md rounded-[32px] border border-emerald-950/40 p-6 flex flex-col items-center shadow-2xl relative overflow-hidden my-6">
+        
+        <!-- Top Glow Aura -->
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-<div class="card">
+        <!-- Logo Header -->
+        <div class="w-24 h-24 rounded-full bg-[#11221d] border-2 border-[#00e699] flex flex-col justify-center items-center shadow-lg glow-green mb-6 z-10">
+            <span class="text-xs tracking-widest uppercase opacity-70 text-emerald-400 font-bold">Bank</span>
+            <span class="text-sm font-extrabold italic text-white tracking-tight -mt-1">Nifty</span>
+        </div>
 
-<img src="dp.jpg" alt="Profile">
+        <!-- Main Heading -->
+        <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide text-center uppercase mb-2">
+            BANK NIFTY <span class="text-[#00e699]">EXPERT</span>
+        </h1>
 
-<h1>SHARE MARKET PRO</h1>
+        <!-- Subtitle -->
+        <p class="text-xs md:text-sm text-center text-emerald-100/60 font-medium tracking-wide max-w-[280px] mb-6">
+            Fast & Accurate Market Analysis • Nifty • Bank Nifty • Options Trading
+        </p>
 
-<p>Daily Market Analysis • Nifty • Bank Nifty • Trading Updates</p>
+        <!-- Stats Counter Section -->
+        <div class="grid grid-cols-3 gap-3 w-full mb-5">
+            <!-- Stat 1 -->
+            <div class="bg-[#062018]/60 border border-emerald-900/40 rounded-xl p-3 text-center">
+                <div class="text-[#00e699] font-extrabold text-base">60K+</div>
+                <div class="text-[10px] text-gray-400 font-medium mt-0.5">Members</div>
+            </div>
+            <!-- Stat 2 -->
+            <div class="bg-[#062018]/60 border border-emerald-900/40 rounded-xl p-3 text-center">
+                <div class="text-[#00e699] font-extrabold text-base">SEBI</div>
+                <div class="text-[10px] text-gray-400 font-medium mt-0.5">Registered</div>
+            </div>
+            <!-- Stat 3 -->
+            <div class="bg-[#062018]/60 border border-emerald-900/40 rounded-xl p-3 text-center">
+                <div class="text-[#00e699] font-extrabold text-base">FREE</div>
+                <div class="text-[10px] text-gray-400 font-medium mt-0.5">Join</div>
+            </div>
+        </div>
 
-<div class="timer" id="count">10</div>
+        <!-- Categories / Features Tags Grid -->
+        <div class="grid grid-cols-2 gap-3 w-full mb-6">
+            <div class="bg-[#07241b]/40 border border-emerald-900/30 rounded-xl py-3 px-4 flex items-center justify-center gap-2">
+                <span>📈</span>
+                <span class="text-xs font-semibold tracking-wide text-gray-200">Nifty Calls</span>
+            </div>
+            <div class="bg-[#07241b]/40 border border-emerald-900/30 rounded-xl py-3 px-4 flex items-center justify-center gap-2">
+                <span>🏦</span>
+                <span class="text-xs font-semibold tracking-wide text-gray-200">Bank Nifty</span>
+            </div>
+            <div class="bg-[#07241b]/40 border border-emerald-900/30 rounded-xl py-3 px-4 flex items-center justify-center gap-2">
+                <span>💹</span>
+                <span class="text-xs font-semibold tracking-wide text-gray-200">Finnifty</span>
+            </div>
+            <div class="bg-[#07241b]/40 border border-emerald-900/30 rounded-xl py-3 px-4 flex items-center justify-center gap-2">
+                <span>📊</span>
+                <span class="text-xs font-semibold tracking-wide text-gray-200">Swing Trades</span>
+            </div>
+        </div>
 
-<a class="btn join"
-href="https://t.me/+Y6Cgn5yZ1NUwZGY1">
-🚀 JOIN TELEGRAM
-</a>
+        <!-- Primary Call To Action Button -->
+        <a href="https://t.me/your_channel" target="_blank" class="w-full bg-[#00e699] hover:bg-[#00cc88] text-[#030f0c] font-extrabold text-sm md:text-base py-4 rounded-2xl flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] duration-200 glow-btn tracking-wider uppercase mb-6">
+            🚀 Join Telegram Free
+        </a>
 
-<a class="btn backup"
-href="https://t.me/+Y6Cgn5yZ1NUwZGY1">
-📈 MARKET UPDATE
-</a>
+        <!-- Feature Details Panel -->
+        <div class="w-full bg-[#051c15]/50 border border-emerald-900/30 rounded-2xl p-4 space-y-3.5 mb-6">
+            <div class="flex items-start gap-2.5">
+                <span class="text-sm mt-0.5">🔥</span>
+                <p class="text-xs text-gray-300 font-medium leading-relaxed">
+                    Daily Market Research & High Probability Trade Setups
+                </p>
+            </div>
+            <div class="flex items-start gap-2.5">
+                <span class="text-sm mt-0.5">⚡</span>
+                <p class="text-xs text-gray-300 font-medium leading-relaxed">
+                    Bank Nifty • Nifty • Options Trading Signals
+                </p>
+            </div>
+            <div class="flex items-start gap-2.5">
+                <span class="text-sm mt-0.5">🚀</span>
+                <p class="text-xs text-gray-300 font-medium leading-relaxed">
+                    Trusted by 60,000+ Traders
+                </p>
+            </div>
+        </div>
 
-<div class="footer">
-Limited Access | Join Before Timer Ends
-</div>
+        <!-- Footer Agency Banner -->
+        <div class="w-full bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-500 text-white rounded-xl p-3 text-center glow-footer text-[11px] font-bold tracking-wider uppercase">
+            🔥 Ads by <span class="underline decoration-white/50 underline-offset-2">ADSBUID AGENCY</span> 🚀 Instant Growth
+        </div>
 
-</div>
-
-<script>
-let t=10;
-let c=document.getElementById("count");
-let x=setInterval(function(){
-t--;
-c.innerHTML=t;
-if(t<=0){
-clearInterval(x);
-window.location.href="https://t.me/+Y6Cgn5yZ1NUwZGY1";
-}
-},1000);
-</script>
+    </div>
 
 </body>
 </html>
