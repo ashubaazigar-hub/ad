@@ -3,177 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pankaj Bhardwaj - Stock Market Channel</title>
-    <!-- Tailwind CSS CDN for styling -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- ===================================== -->
-    <!-- DEMO META PIXEL CODE START -->
-    <!-- ===================================== -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        
-        fbq('init', '123456789012345'); // <-- Yahan apni real Meta Pixel ID dalein
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1"/> <!-- <-- Yahan bhi real Pixel ID dalein -->
-    </noscript>
-    <!-- ===================================== -->
-    <!-- DEMO META PIXEL CODE END -->
-    <!-- ===================================== -->
+    <title>Pankaj Bhardwaj - Stock Market Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f6f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #1e293b;
+            padding: 20px 10px;
+        }
+
+        .landing-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 24px;
+            text-align: center;
+        }
+
+        /* --- Section 1 Styles --- */
+        .online-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #edf5ff;
+            color: #1d4ed8;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .online-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 16px;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 28px;
+            height: 28px;
+            background-color: #007aff;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: 800;
+            color: #111827;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .rating-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .stars {
+            color: #ff9500;
+            font-size: 16px;
+        }
+
+        /* --- Lightning / Glowing CTA Button --- */
+        .cta-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #007aff, #0056b3);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px 32px;
+            border-radius: 16px;
+            width: 100%;
+            margin: 16px 0;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.4);
+            animation: lightPulse 2s infinite alternate;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.02);
+        }
+
+        @keyframes lightPulse {
+            0% {
+                box-shadow: 0 0 8px rgba(0, 122, 255, 0.5), 0 4px 15px rgba(0, 122, 255, 0.4);
+                filter: brightness(1);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(0, 122, 255, 0.8), 0 6px 25px rgba(0, 122, 255, 0.6);
+                filter: brightness(1.15);
+            }
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e2e8f0;
+            margin: 28px 0;
+        }
+
+        /* --- Section 2 Styles --- */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background-color: #f8fafc;
+            border: 1px solid #f1f5f9;
+            padding: 12px 8px;
+            border-radius: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .stat-num {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1d4ed8;
+            margin-bottom: 2px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .pitch-title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .pitch-title span {
+            color: #2563eb;
+        }
+
+        .pitch-desc {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 16px;
+        }
+
+        .urgency-badge {
+            background-color: #fff7ed;
+            border: 1px solid #ffedd5;
+            color: #c2410c;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 10px 14px;
+            border-radius: 12px;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .feature-item {
+            background-color: #ffffff;
+            border: 1px solid #f1f5f9;
+            padding: 14px 16px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+        }
+
+        .feature-icon {
+            font-size: 18px;
+            background-color: #f1f5f9;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .feature-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+        }
+    </style>
 </head>
-<body class="bg-[#f4f7fa] font-sans antialiased text-gray-900 flex justify-center items-center min-h-screen p-4">
+<body>
 
-    <!-- Main Card Container -->
-    <div class="w-full max-w-md bg-white rounded-3xl shadow-xl overflow-hidden p-6 space-y-6">
+    <div class="landing-container">
         
-        <!-- SECTION 1: Profile Info -->
-        <div class="flex flex-col items-center text-center space-y-4">
-            
-            <!-- Online Counter Badge -->
-            <div class="bg-[#edf2ff] text-[#3b5bdb] text-sm font-semibold px-4 py-1.5 rounded-full flex items-center gap-2">
-                <span class="w-2 h-2 bg-[#3b5bdb] rounded-full animate-pulse"></span>
-                5,947 traders online now
-            </div>
-
-            <!-- Profile Picture with Verified Badge -->
-            <div class="relative w-32 h-32 mt-2">
-                <!-- Aapki Photo ka naam yahan replace kar diya gaya hai -->
-                <img src="IMG_20260710_233209_098.jpg" alt="Pankaj Bhardwaj" class="w-full h-full object-cover rounded-full border-4 border-white shadow-md">
-                <!-- Verified Badge -->
-                <div class="absolute bottom-1 right-1 bg-[#2979ff] text-white rounded-full w-7 h-7 flex items-center justify-center border-2 border-white">
-                    <i class="fas fa-check text-xs"></i>
-                </div>
-            </div>
-
-            <!-- Name and Title -->
-            <div>
-                <h1 class="text-2xl font-extrabold tracking-wide text-gray-800 uppercase">Pankaj Bhardwaj</h1>
-                <p class="text-[#2979ff] font-semibold text-md mt-1">
-                    🏆 India's No.1 Stock Market Channel
-                </p>
-            </div>
-
-            <!-- Ratings -->
-            <div class="flex items-center gap-1.5 bg-gray-50 px-3 py-1 rounded-lg">
-                <div class="text-orange-400 space-x-0.5 text-sm">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <span class="text-sm font-bold text-gray-700">4.9/5</span>
-                <span class="text-xs text-gray-400">(2,340 reviews)</span>
-            </div>
-
-            <!-- BUTTON 1 -->
-            <a href="https://t.me/+qEokwh0D-WlkNzJl" target="_blank" class="w-full bg-[#2979ff] hover:bg-[#1a66ff] text-white text-lg font-bold py-4 px-6 rounded-2xl shadow-lg transition duration-200 text-center block transform active:scale-95">
-                Join Free Telegram Channel &rarr;
-            </a>
+        <!-- --- SECTION 1 --- -->
+        <div class="online-badge">
+            <span class="online-dot"></span>
+            5,947 traders online now
         </div>
 
-        <hr class="border-gray-100">
-
-        <!-- SECTION 2: Statistics & Features -->
-        <div class="space-y-6">
-            
-            <!-- Grid Stats -->
-            <div class="grid grid-cols-3 gap-3">
-                <div class="bg-white border border-gray-100 rounded-xl p-3 text-center shadow-sm">
-                    <p class="text-[#2979ff] text-lg font-extrabold">50K+</p>
-                    <p class="text-[11px] text-gray-400 font-medium mt-0.5">Members</p>
-                </div>
-                <div class="bg-white border border-gray-100 rounded-xl p-3 text-center shadow-sm">
-                    <p class="text-[#2979ff] text-lg font-extrabold">5+ Yrs</p>
-                    <p class="text-[11px] text-gray-400 font-medium mt-0.5">Experience</p>
-                </div>
-                <div class="bg-white border border-gray-100 rounded-xl p-3 text-center shadow-sm">
-                    <p class="text-[#2979ff] text-lg font-extrabold">95%</p>
-                    <p class="text-[11px] text-gray-400 font-medium mt-0.5">Accuracy</p>
-                </div>
-            </div>
-
-            <!-- Main Promotion Text -->
-            <div class="text-center space-y-1">
-                <p class="text-lg text-gray-800 font-normal">
-                    Get <span class="text-[#2979ff] font-extrabold">FREE daily calls</span> for
-                </p>
-                <p class="text-xl font-black text-gray-900 tracking-tight">
-                    NIFTY, BANKNIFTY & SENSEX
-                </p>
-                <p class="text-xs text-gray-400 pt-1">
-                    Join thousands of traders getting free premium analysis daily
-                </p>
-            </div>
-
-            <!-- Urgent Banner -->
-            <div class="bg-[#fff4e6] text-[#d9480f] text-xs font-bold py-2.5 px-4 rounded-xl text-center flex items-center justify-center gap-1">
-                <span>🔥</span> 7,589 people joined today — Limited FREE access!
-            </div>
-
-            <!-- BUTTON 2 -->
-            <a href="https://t.me/+qEokwh0D-WlkNzJl" target="_blank" class="w-full bg-[#2979ff] hover:bg-[#1a66ff] text-white text-lg font-bold py-4 px-6 rounded-2xl shadow-lg transition duration-200 text-center block transform active:scale-95">
-                Join Free Telegram Channel &rarr;
-            </a>
-
-            <!-- Features List Vertical Stack -->
-            <div class="space-y-2.5">
-                <div class="flex items-center gap-4 bg-white border border-gray-50 p-3.5 rounded-xl shadow-xs">
-                    <div class="bg-blue-50 text-[#2979ff] w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
-                        <i class="fas fa-chart-bar text-base"></i>
-                    </div>
-                    <span class="text-sm font-semibold text-gray-700">Daily Nifty & BankNifty Levels</span>
-                </div>
-
-                <div class="flex items-center gap-4 bg-white border border-gray-50 p-3.5 rounded-xl shadow-xs">
-                    <div class="bg-blue-50 text-[#2979ff] w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
-                        <i class="fas fa-graduation-cap text-base"></i>
-                    </div>
-                    <span class="text-sm font-semibold text-gray-700">No Paid Tips – Purely Educational</span>
-                </div>
-
-                <div class="flex items-center gap-4 bg-white border border-gray-50 p-3.5 rounded-xl shadow-xs">
-                    <div class="bg-blue-50 text-[#2979ff] w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
-                        <i class="fas fa-hourglass-half text-base"></i>
-                    </div>
-                    <span class="text-sm font-semibold text-gray-700">5+ Years of Market Experience</span>
-                </div>
-
-                <div class="flex items-center gap-4 bg-white border border-gray-50 p-3.5 rounded-xl shadow-xs">
-                    <div class="bg-blue-50 text-[#2979ff] w-10 h-10 rounded-lg flex items-center justify-center shrink-0">
-                        <i class="fas fa-users text-base"></i>
-                    </div>
-                    <span class="text-sm font-semibold text-gray-700">50,000+ Subscribers Trust Us</span>
-                </div>
-            </div>
-
-            <!-- Bottom Footnotes & Button -->
-            <div class="pt-2 text-center space-y-4">
-                <div class="text-xs text-gray-500 font-medium flex items-center justify-center gap-1.5">
-                    <span class="text-green-500"><i class="fas fa-check-circle"></i></span> Verified Channel
-                    <span class="text-gray-300">•</span> Free Forever
-                    <span class="text-gray-300">•</span> No Spam
-                </div>
-
-                <!-- BUTTON 3 (Dark Theme Button) -->
-                <div class="space-y-2">
-                    <a href="https://t.me/+qEokwh0D-WlkNzJl" target="_blank" class="w-full bg-[#1c2434] hover:bg-[#2c374e] text-white text-base font-bold py-4 px-6 rounded-2xl shadow-md transition duration-200 text-center block transform active:scale-95 tracking-wide">
-                        Join Now — It's 100% FREE
-                    </a>
-                    <div class="text-xs text-[#e03131] font-semibold flex items-center justify-center gap-1">
-                        <span>⏰</span> Limited time offer
-                    </div>
-                </div>
-            </div>
-
+        <div class="avatar-container">
+            <!-- Profile Image Setup -->
+            <img class="avatar-img" src="IMG-20260713-WA0000.jpg" alt="Pankaj Bhardwaj">
+            <div class="verified-badge">✓</div>
         </div>
+
+        <h1 class="name">Pankaj Bhardwaj</h1>
+        <p class="subtitle">🏆 India's No.1 Stock Market Channel</p>
+
+        <div class="rating-container">
+            <span class="stars">⭐⭐⭐⭐⭐</span>
+            <span>4.9/5 (2,340 reviews)</span>
+        </div>
+
+        <!-- Glowing Button 1 -->
+        <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-button" target="_blank">
+            Join Free Telegram Channel &rarr;
+        </a>
+
+        <div class="divider"></div>
+
+        <!-- --- SECTION 2 --- -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-num">50K+</div>
+                <div class="stat-label">Members</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">5+ Yrs</div>
+                <div class="stat-label">Experience</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-num">95%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+        </div>
+
+        <h2 class="pitch-title">Get <span>FREE daily calls</span> for NIFTY, BANKNIFTY & SENSEX</h2>
+        <p class="pitch-desc">Join thousands of traders getting free premium analysis daily</p>
+
+        <div class="urgency-badge">
+            🔥 7,589 people joined today — Limited FREE access!
+        </div>
+
+        <!-- Glowing Button 2 -->
+        <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-button" target="_blank">
+            Join Free Telegram Channel &rarr;
+        </a>
+
+        <!-- Feature List -->
+        <div class="features-list">
+            <div class="feature-item">
+                <div class="feature-icon">📊</div>
+                <div class="feature-text">Daily Nifty & BankNifty Levels</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎓</div>
+                <div class="feature-text">No Paid Tips – Purely Educational</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⏳</div>
+                <div class="feature-text">5+ Years of Market Experience</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">👥</div>
+                <div class="feature-text">50,000+ Subscribers Trust Us</div>
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="footer-text">
+            <span>✅</span> <strong>Verified Channel</strong> • Free Forever • No Spam
+        </div>
+
     </div>
 
 </body>
