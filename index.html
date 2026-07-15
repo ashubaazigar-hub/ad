@@ -15,11 +15,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '806929429080631');
+    fbq('init', '1034434235634758');
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=806929429080631&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=1034434235634758&ev=PageView&noscript=1"
     /></noscript>
     <!-- --- End Meta Pixel Code --- -->
 
@@ -145,7 +145,7 @@
             font-size: 16px;
         }
 
-        /* --- Lightning / Glowing CTA Button --- */
+        /* --- Moving & Shaking Glowing CTA Button --- */
         .cta-button {
             display: flex;
             justify-content: center;
@@ -159,14 +159,10 @@
             padding: 18px 32px;
             border-radius: 16px;
             width: 100%;
-            margin: 16px 0;
-            transition: transform 0.2s ease;
+            margin: 16px 0 8px 0;
             box-shadow: 0 4px 15px rgba(0, 122, 255, 0.4);
-            animation: lightPulse 1.8s infinite alternate;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.02);
+            animation: lightPulse 1.8s infinite alternate, buttonShake 2.5s infinite ease-in-out;
+            transform-origin: center;
         }
 
         @keyframes lightPulse {
@@ -180,10 +176,58 @@
             }
         }
 
+        @keyframes buttonShake {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            8%, 24% { transform: scale(1.02) rotate(-1deg); }
+            16%, 32% { transform: scale(1.02) rotate(1deg); }
+            40% { transform: scale(1) rotate(0deg); }
+        }
+
+        /* --- Auto Joining Timer Styling --- */
+        .timer-container {
+            margin-bottom: 16px;
+            padding: 0 4px;
+        }
+
+        .timer-text {
+            font-size: 13px;
+            color: #475569;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .timer-text .countdown-num {
+            color: #b45309;
+            font-weight: 700;
+        }
+
+        .progress-bg {
+            background-color: #e2e8f0;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            background-color: #f59e0b;
+            height: 100%;
+            width: 100%;
+            transition: width 1s linear;
+        }
+
+        .timer-subtext {
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
         .divider {
             height: 1px;
             background-color: #e2e8f0;
-            margin: 28px 0;
+            margin: 24px 0;
         }
 
         /* --- Section 2 Styles --- */
@@ -233,7 +277,6 @@
             margin-bottom: 16px;
         }
 
-        /* Fixed Single Line Urgency Badge */
         .urgency-badge {
             background-color: #fff7ed;
             border: 1px solid #ffedd5;
@@ -282,18 +325,19 @@
 
         .feature-text {
             font-size: 14px;
-            font-weight: 600;
-            color: #334155;
+            font-weight: 800; 
+            color: #0f172a;
         }
 
         .footer-text {
             font-size: 12px;
-            color: #64748b;
+            color: #1e293b;
             margin-top: 24px;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 4px;
+            font-weight: 800;
         }
     </style>
 </head>
@@ -324,9 +368,17 @@
             <span>4.9/5 (2,340 reviews)</span>
         </div>
 
+        <!-- Shaking Button 1 -->
         <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-button" target="_blank">
             Join Free Telegram Channel &rarr;
         </a>
+
+        <!-- Auto Joining Bar 1 (300 Seconds = 5 Mins) -->
+        <div class="timer-container">
+            <div class="timer-text">Auto-joining in <span class="countdown-num">300</span>s</div>
+            <div class="progress-bg"><div class="progress-bar"></div></div>
+            <div class="timer-subtext">• Click to join • No spam • Unsubscribe anytime</div>
+        </div>
 
         <div class="divider"></div>
 
@@ -353,10 +405,19 @@
             🔥 7,589 people joined today — Limited FREE access!
         </div>
 
+        <!-- Shaking Button 2 -->
         <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-button" target="_blank">
             Join Free Telegram Channel &rarr;
         </a>
 
+        <!-- Auto Joining Bar 2 (300 Seconds = 5 Mins) -->
+        <div class="timer-container">
+            <div class="timer-text">Auto-joining in <span class="countdown-num">300</span>s</div>
+            <div class="progress-bg"><div class="progress-bar"></div></div>
+            <div class="timer-subtext">• Click to join • No spam • Unsubscribe anytime</div>
+        </div>
+
+        <!-- Bold Features List -->
         <div class="features-list">
             <div class="feature-item">
                 <div class="feature-icon">📊</div>
@@ -376,11 +437,38 @@
             </div>
         </div>
 
+        <!-- Bold Footer Info -->
         <div class="footer-text">
-            <span>✅</span> <strong>Verified Channel</strong> • Free Forever • No Spam
+            <span>✅</span> <strong>Verified Channel • Free Forever • No Spam</strong>
         </div>
 
     </div>
 
+    <!-- Live 5-Minute (300s) Auto-Redirect Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let timeLeft = 300; // 5 minutes in seconds
+            const targetUrl = "https://t.me/+qEokwh0D-WlkNzJl";
+            const countdownNums = document.querySelectorAll(".countdown-num");
+            const progressBars = document.querySelectorAll(".progress-bar");
+            
+            const countdownInterval = setInterval(function() {
+                timeLeft--;
+                
+                countdownNums.forEach(function(num) {
+                    num.textContent = timeLeft;
+                });
+                
+                progressBars.forEach(function(bar) {
+                    bar.style.width = (timeLeft / 300 * 100) + "%";
+                });
+                
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = targetUrl;
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
