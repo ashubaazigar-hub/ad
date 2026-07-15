@@ -145,7 +145,7 @@
             font-size: 16px;
         }
 
-        /* --- Moving & Shaking Glowing CTA Button --- */
+        /* --- Glowing CTA Button (Static, No Shaking) --- */
         .cta-button {
             display: flex;
             justify-content: center;
@@ -159,10 +159,10 @@
             padding: 18px 32px;
             border-radius: 16px;
             width: 100%;
-            margin: 16px 0 8px 0;
+            margin: 16px 0;
             box-shadow: 0 4px 15px rgba(0, 122, 255, 0.4);
-            animation: lightPulse 1.8s infinite alternate, buttonShake 2.5s infinite ease-in-out;
-            transform-origin: center;
+            /* Only Glowing Animation, No Shake */
+            animation: lightPulse 1.8s infinite alternate;
         }
 
         @keyframes lightPulse {
@@ -174,54 +174,6 @@
                 box-shadow: 0 0 22px rgba(0, 122, 255, 0.9), 0 6px 25px rgba(0, 122, 255, 0.7);
                 filter: brightness(1.2);
             }
-        }
-
-        @keyframes buttonShake {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            8%, 24% { transform: scale(1.02) rotate(-1deg); }
-            16%, 32% { transform: scale(1.02) rotate(1deg); }
-            40% { transform: scale(1) rotate(0deg); }
-        }
-
-        /* --- Auto Joining Timer Styling --- */
-        .timer-container {
-            margin-bottom: 16px;
-            padding: 0 4px;
-        }
-
-        .timer-text {
-            font-size: 13px;
-            color: #475569;
-            margin-bottom: 6px;
-            font-weight: 500;
-        }
-
-        .timer-text .countdown-num {
-            color: #b45309;
-            font-weight: 700;
-        }
-
-        .progress-bg {
-            background-color: #e2e8f0;
-            height: 4px;
-            width: 100%;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 8px;
-        }
-
-        .progress-bar {
-            background-color: #f59e0b;
-            height: 100%;
-            width: 100%;
-            transition: width 1s linear;
-        }
-
-        .timer-subtext {
-            font-size: 12px;
-            color: #64748b;
-            font-weight: 600;
-            letter-spacing: 0.3px;
         }
 
         .divider {
@@ -368,17 +320,10 @@
             <span>4.9/5 (2,340 reviews)</span>
         </div>
 
-        <!-- Shaking Button 1 -->
+        <!-- Glowing Button 1 -->
         <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-button" target="_blank">
             Join Free Telegram Channel &rarr;
         </a>
-
-        <!-- Auto Joining Bar 1 (300 Seconds = 5 Mins) -->
-        <div class="timer-container">
-            <div class="timer-text">Auto-joining in <span class="countdown-num">300</span>s</div>
-            <div class="progress-bg"><div class="progress-bar"></div></div>
-            <div class="timer-subtext">• Click to join • No spam • Unsubscribe anytime</div>
-        </div>
 
         <div class="divider"></div>
 
@@ -405,17 +350,10 @@
             🔥 7,589 people joined today — Limited FREE access!
         </div>
 
-        <!-- Shaking Button 2 -->
+        <!-- Glowing Button 2 -->
         <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-button" target="_blank">
             Join Free Telegram Channel &rarr;
         </a>
-
-        <!-- Auto Joining Bar 2 (300 Seconds = 5 Mins) -->
-        <div class="timer-container">
-            <div class="timer-text">Auto-joining in <span class="countdown-num">300</span>s</div>
-            <div class="progress-bg"><div class="progress-bar"></div></div>
-            <div class="timer-subtext">• Click to join • No spam • Unsubscribe anytime</div>
-        </div>
 
         <!-- Bold Features List -->
         <div class="features-list">
@@ -444,31 +382,5 @@
 
     </div>
 
-    <!-- Live 5-Minute (300s) Auto-Redirect Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let timeLeft = 300; // 5 minutes in seconds
-            const targetUrl = "https://t.me/+qEokwh0D-WlkNzJl";
-            const countdownNums = document.querySelectorAll(".countdown-num");
-            const progressBars = document.querySelectorAll(".progress-bar");
-            
-            const countdownInterval = setInterval(function() {
-                timeLeft--;
-                
-                countdownNums.forEach(function(num) {
-                    num.textContent = timeLeft;
-                });
-                
-                progressBars.forEach(function(bar) {
-                    bar.style.width = (timeLeft / 300 * 100) + "%";
-                });
-                
-                if (timeLeft <= 0) {
-                    clearInterval(countdownInterval);
-                    window.location.href = targetUrl;
-                }
-            }, 1000);
-        });
-    </script>
 </body>
 </html>
