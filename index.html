@@ -1,286 +1,298 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>King Of Nifty - Dr. Vikash Laddha</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Of Nifty - Telegram Channel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1034434235634758');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1034434235634758&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2124997941734929');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=2124997941734929&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 15px;
+        }
 
-    body {
-      background-color: #030f0a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
+        .container {
+            width: 100%;
+            max-width: 440px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
 
-    /* Main Container Box */
-    .card-container {
-      width: 100%;
-      max-width: 420px;
-      background: linear-gradient(180deg, #072218 0%, #03140e 100%);
-      border: 1px solid rgba(0, 230, 118, 0.2);
-      border-radius: 28px;
-      padding: 24px 20px;
-      text-align: center;
-      color: #ffffff;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
+        /* Profile / Header Section */
+        .profile-section {
+            margin-bottom: 20px;
+        }
 
-    /* Top SEBI Tag */
-    .top-badge {
-      display: inline-block;
-      border: 1px solid #00e676;
-      color: #00e676;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 16px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
+        .dp-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0066ff;
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+            margin-bottom: 12px;
+        }
 
-    /* Profile Avatar / DP Wrapper */
-    .avatar-wrapper {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      padding: 4px;
-      background: linear-gradient(135deg, #00e676, #00838f);
-      box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
-      overflow: hidden;
-    }
+        .profile-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-    .avatar-img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-    }
+        .profile-subtitle {
+            font-size: 15px;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 16px;
+        }
 
-    /* Main Title - Extra Bold & Highlighted */
-    .main-title {
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: 0.8px;
-      margin-bottom: 4px;
-      color: #ffffff;
-      text-transform: uppercase;
-      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
-    }
+        /* Main Heading */
+        .headline {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
 
-    /* Subtitle - Extra Bold */
-    .subtitle {
-      font-size: 17px;
-      color: #00e676;
-      font-weight: 900;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
+        .headline span {
+            color: #2563eb;
+        }
 
-    .award {
-      font-size: 14px;
-      color: #e0e0e0;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
+        .sub-headline {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 16px;
+        }
 
-    /* Star Rating Box */
-    .rating-container {
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
+        /* Urgency Badge */
+        .badge {
+            background-color: #fff7ed;
+            border: 1px solid #ffedd5;
+            color: #ea580c;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
 
-    .stars {
-      color: #ffca28;
-      margin-right: 4px;
-    }
+        /* Dynamic Shocking/Shaking Animation for Buttons */
+        @keyframes shock-shake {
+            0% { transform: scale(1) rotate(0deg); }
+            20% { transform: scale(1.03) rotate(-2deg); }
+            30% { transform: scale(1.03) rotate(2deg); }
+            40% { transform: scale(1.03) rotate(-2deg); }
+            50% { transform: scale(1.03) rotate(2deg); }
+            60% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
 
-    .rating-text {
-      color: #b0bec5;
-    }
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            font-size: 17px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: transform 0.2s ease;
+            animation: shock-shake 2.5s infinite ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
 
-    .rating-text strong {
-      color: #fff;
-    }
+        .btn-blue {
+            background-color: #0066ff;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
 
-    /* Stats Grid */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 16px;
-    }
+        .btn-dark {
+            background-color: #0f172a;
+            color: #ffffff;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
 
-    .stat-box {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(0, 230, 118, 0.15);
-      border-radius: 14px;
-      padding: 12px 6px;
-    }
+        /* Feature Cards */
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
 
-    .stat-number {
-      font-size: 18px;
-      font-weight: 800;
-      color: #00e676;
-    }
+        .feature-card {
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border-radius: 12px;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-align: left;
+        }
 
-    .stat-label {
-      font-size: 11px;
-      color: #a0aec0;
-      margin-top: 2px;
-    }
+        .feature-icon {
+            font-size: 20px;
+            background: #eff6ff;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
 
-    /* Category Buttons Grid */
-    .tags-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 22px;
-    }
+        .feature-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #334155;
+        }
 
-    .tag-item {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 10px;
-      font-size: 13px;
-      font-weight: 600;
-    }
+        /* Status & Timer */
+        .verification {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
 
-    /* Moving & Pulsing Join Button */
-    .join-btn {
-      display: block;
-      width: 100%;
-      background: linear-gradient(90deg, #00e676 0%, #00c853 100%);
-      color: #03140e;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 800;
-      padding: 16px 20px;
-      border-radius: 16px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 25px rgba(0, 230, 118, 0.6);
-      transition: transform 0.2s;
-      animation: vibrate-pulse 1.8s infinite ease-in-out;
-    }
+        .verification strong {
+            color: #2563eb;
+        }
 
-    /* Button Hilne (Vibrate) Wala Animation */
-    @keyframes vibrate-pulse {
-      0% { transform: scale(1) rotate(0deg); }
-      15% { transform: scale(1.04) rotate(-1.5deg); }
-      30% { transform: scale(1.04) rotate(1.5deg); }
-      45% { transform: scale(1.04) rotate(-1.5deg); }
-      60% { transform: scale(1.04) rotate(1.5deg); }
-      75% { transform: scale(1.04) rotate(0deg); }
-      100% { transform: scale(1) rotate(0deg); }
-    }
+        .timer-notice {
+            font-size: 13px;
+            color: #ef4444;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
 
-    /* Bottom Info Box */
-    .info-box {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+        /* Footer */
+        .footer-quote {
+            font-size: 12px;
+            color: #94a3b8;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
 
-    .info-line {
-      font-size: 13px;
-      line-height: 1.4;
-      color: #ffffff;
-      font-weight: 700;
-    }
-  </style>
+        .footer-ads {
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="card-container">
-    <!-- SEBI Tag -->
-    <div class="top-badge">SEBI Registered Research Analyst</div>
+    <div class="container">
+        
+        <!-- DP and Name Header -->
+        <div class="profile-section">
+            <img src="IMG-20260713-WA0000.jpg" alt="King Of Nifty DP" class="dp-img">
+            <h1 class="profile-title">King Of Nifty</h1>
+            <p class="profile-subtitle">( DR. VIKASH LADDHA )</p>
+        </div>
 
-    <!-- Profile DP (Yahan Apni Image Ka Link Daalein) -->
-    <div class="avatar-wrapper">
-      <img src="YOUR_IMAGE_URL_HERE" alt="King Of Nifty DP" class="avatar-img">
+        <!-- Main Title -->
+        <h2 class="headline">Get <span>FREE daily calls</span> for NIFTY, BANKNIFTY & SENSEX</h2>
+        <p class="sub-headline">Join thousands of traders getting free premium analysis daily</p>
+
+        <!-- Badge -->
+        <div class="badge">
+            🔥 7,589 people joined today — Limited FREE access!
+        </div>
+
+        <!-- Button 1 (Shocking/Shaking Animation) -->
+        <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn btn-blue" target="_blank" onclick="fbq('track', 'Lead');">
+            Join Free Telegram Channel &rarr;
+        </a>
+
+        <!-- Feature List Cards -->
+        <div class="features-list">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-text">Daily Nifty & BankNifty Levels</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <div class="feature-text">No Paid Tips – Purely Educational</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⏳</div>
+                <div class="feature-text">5+ Years of Market Experience</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <div class="feature-text">50,000+ Subscribers Trust Us</div>
+            </div>
+        </div>
+
+        <!-- Verification -->
+        <div class="verification">
+            ✅ <strong>Verified Channel</strong> • Free Forever • No Spam
+        </div>
+
+        <!-- Button 2 (Shocking/Shaking Animation) -->
+        <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn btn-dark" target="_blank" onclick="fbq('track', 'Lead');">
+            Join Now — It's 100% FREE
+        </a>
+
+        <!-- Timer -->
+        <div class="timer-notice">
+            ⏰ Limited time offer
+        </div>
+
+        <!-- Footer Quotes -->
+        <p class="footer-quote">“Aaj mehnat kar lo, kal naam apna khud banega.”</p>
+        <p class="footer-ads">Telegram Id { For Advertising } - @Ads2laabh</p>
+
     </div>
-
-    <!-- Title & Doctor Name (Extra Bold) -->
-    <h1 class="main-title">King Of Nifty</h1>
-    <div class="subtitle">( DR. VIKASH LADDHA )</div>
-    <div class="award">🏆 India's No.1 Stock Market Channel</div>
-
-    <!-- Rating Section -->
-    <div class="rating-container">
-      <span class="stars">⭐⭐⭐⭐⭐</span>
-      <span class="rating-text"><strong>4.9/5</strong> (2,340 reviews)</span>
-    </div>
-
-    <!-- Stats Grid -->
-    <div class="stats-grid">
-      <div class="stat-box">
-        <div class="stat-number">60K+</div>
-        <div class="stat-label">Members</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">SEBI</div>
-        <div class="stat-label">Registered</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number">FREE</div>
-        <div class="stat-label">Join</div>
-      </div>
-    </div>
-
-    <!-- Feature Tags -->
-    <div class="tags-grid">
-      <div class="tag-item">📈 Nifty Calls</div>
-      <div class="tag-item">🏛️ Bank Nifty</div>
-      <div class="tag-item">💹 Finnifty</div>
-      <div class="tag-item">📊 Swing Trades</div>
-    </div>
-
-    <!-- Telegram Action Button -->
-    <a href="https://t.me/+qEokwh0D-WlkNzJl" class="join-btn" target="_blank">
-      🚀 JOIN TELEGRAM FREE
-    </a>
-
-    <!-- Bottom Info Box -->
-    <div class="info-box">
-      <div class="info-line">🔥 <b>Daily Market Research & High Probability Trade Setups</b></div>
-      <div class="info-line">⚡ <b>Bank Nifty · Nifty · Options Trading Signals</b></div>
-      <div class="info-line">🤝 <b>Trusted by 60,000+ Traders</b></div>
-    </div>
-  </div>
 
 </body>
 </html>
