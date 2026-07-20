@@ -1,298 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>King Of Nifty - Telegram Channel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1034434235634758');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1034434235634758&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King Of Nifty (DR. VIKASH LADDHA)</title>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+    body {
+      background-color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      padding: 20px 12px;
+      color: #1e293b;
+    }
 
-        body {
-            background-color: #f8fafc;
-            color: #1e293b;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px 15px;
-        }
+    .container {
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 440px;
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 24px 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
+    /* Live Badge */
+    .live-badge {
+      background-color: #ebf3ff;
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        /* Profile / Header Section */
-        .profile-section {
-            margin-bottom: 20px;
-        }
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #2563eb;
+      border-radius: 50%;
+    }
 
-        .dp-img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #0066ff;
-            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
-            margin-bottom: 12px;
-        }
+    /* Profile Header */
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-        .profile-title {
-            font-size: 24px;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 2px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    .avatar-container {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin-bottom: 12px;
+    }
 
-        .profile-subtitle {
-            font-size: 15px;
-            font-weight: 700;
-            color: #475569;
-            margin-bottom: 16px;
-        }
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-        /* Main Heading */
-        .headline {
-            font-size: 20px;
-            font-weight: 700;
-            color: #0f172a;
-            line-height: 1.35;
-            margin-bottom: 10px;
-        }
+    .verified-icon {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      background-color: #1d9bf0;
+      color: white;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      border: 2px solid white;
+    }
 
-        .headline span {
-            color: #2563eb;
-        }
+    .name {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #0f172a;
+      line-height: 1.2;
+    }
 
-        .sub-headline {
-            font-size: 14px;
-            color: #64748b;
-            margin-bottom: 16px;
-        }
+    .sub-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #475569;
+      margin-top: 4px;
+    }
 
-        /* Urgency Badge */
-        .badge {
-            background-color: #fff7ed;
-            border: 1px solid #ffedd5;
-            color: #ea580c;
-            font-size: 13px;
-            font-weight: 600;
-            padding: 8px 12px;
-            border-radius: 30px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
+    .tagline {
+      color: #2563eb;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
 
-        /* Dynamic Shocking/Shaking Animation for Buttons */
-        @keyframes shock-shake {
-            0% { transform: scale(1) rotate(0deg); }
-            20% { transform: scale(1.03) rotate(-2deg); }
-            30% { transform: scale(1.03) rotate(2deg); }
-            40% { transform: scale(1.03) rotate(-2deg); }
-            50% { transform: scale(1.03) rotate(2deg); }
-            60% { transform: scale(1) rotate(0deg); }
-            100% { transform: scale(1) rotate(0deg); }
-        }
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+    }
 
-        .cta-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 16px;
-            font-size: 17px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: transform 0.2s ease;
-            animation: shock-shake 2.5s infinite ease-in-out;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        }
+    .stars {
+      color: #f59e0b;
+      font-size: 16px;
+    }
 
-        .btn-blue {
-            background-color: #0066ff;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
+    .rating-text {
+      color: #64748b;
+      font-size: 14px;
+    }
 
-        .btn-dark {
-            background-color: #0f172a;
-            color: #ffffff;
-            margin-top: 15px;
-            margin-bottom: 10px;
-        }
+    /* Primary CTA Button */
+    .btn-primary {
+      width: 100%;
+      background-color: #0066ff;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      text-align: center;
+      padding: 16px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.25);
+      transition: background-color 0.2s;
+    }
 
-        /* Feature Cards */
-        .features-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
+    .btn-primary:hover {
+      background-color: #0052cc;
+    }
 
-        .feature-card {
-            background: #ffffff;
-            border: 1px solid #f1f5f9;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            border-radius: 12px;
-            padding: 14px 16px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-align: left;
-        }
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      width: 100%;
+    }
 
-        .feature-icon {
-            font-size: 20px;
-            background: #eff6ff;
-            width: 42px;
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            flex-shrink: 0;
-        }
+    .stat-card {
+      background: white;
+      padding: 16px 8px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
 
-        .feature-text {
-            font-size: 15px;
-            font-weight: 600;
-            color: #334155;
-        }
+    .stat-number {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0066ff;
+    }
 
-        /* Status & Timer */
-        .verification {
-            font-size: 13px;
-            color: #64748b;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-        }
+    .stat-label {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 2px;
+    }
 
-        .verification strong {
-            color: #2563eb;
-        }
+    /* Pitch Header */
+    .pitch-section {
+      text-align: center;
+      margin: 6px 0;
+    }
 
-        .timer-notice {
-            font-size: 13px;
-            color: #ef4444;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+    .pitch-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.4;
+    }
 
-        /* Footer */
-        .footer-quote {
-            font-size: 12px;
-            color: #94a3b8;
-            font-style: italic;
-            margin-bottom: 4px;
-        }
+    .pitch-title .highlight {
+      color: #0066ff;
+    }
 
-        .footer-ads {
-            font-size: 12px;
-            color: #cbd5e1;
-        }
-    </style>
+    .pitch-subtitle {
+      font-size: 13px;
+      color: #64748b;
+      margin-top: 6px;
+    }
+
+    /* Urgency Banner */
+    .urgency-banner {
+      width: 100%;
+      background-color: #fff7ed;
+      border: 1px solid #ffedd5;
+      color: #c2410c;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 12px;
+      border-radius: 50px;
+      text-align: center;
+    }
+
+    /* Feature Cards List */
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 16px 20px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .feature-icon-box {
+      width: 44px;
+      height: 44px;
+      background-color: #eff6ff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0066ff;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .feature-text {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    /* Footer Trust Line */
+    .trust-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .verified-box {
+      color: #84cc16;
+      font-size: 16px;
+    }
+
+    .verified-text {
+      font-weight: 700;
+      color: #0066ff;
+    }
+
+    .trust-subtext {
+      color: #64748b;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <!-- DP and Name Header -->
-        <div class="profile-section">
-            <img src="IMG-20260713-WA0000.jpg" alt="King Of Nifty DP" class="dp-img">
-            <h1 class="profile-title">King Of Nifty</h1>
-            <p class="profile-subtitle">( DR. VIKASH LADDHA )</p>
-        </div>
-
-        <!-- Main Title -->
-        <h2 class="headline">Get <span>FREE daily calls</span> for NIFTY, BANKNIFTY & SENSEX</h2>
-        <p class="sub-headline">Join thousands of traders getting free premium analysis daily</p>
-
-        <!-- Badge -->
-        <div class="badge">
-            🔥 7,589 people joined today — Limited FREE access!
-        </div>
-
-        <!-- Button 1 (Shocking/Shaking Animation) -->
-        <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn btn-blue" target="_blank" onclick="fbq('track', 'Lead');">
-            Join Free Telegram Channel &rarr;
-        </a>
-
-        <!-- Feature List Cards -->
-        <div class="features-list">
-            <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <div class="feature-text">Daily Nifty & BankNifty Levels</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎓</div>
-                <div class="feature-text">No Paid Tips – Purely Educational</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⏳</div>
-                <div class="feature-text">5+ Years of Market Experience</div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <div class="feature-text">50,000+ Subscribers Trust Us</div>
-            </div>
-        </div>
-
-        <!-- Verification -->
-        <div class="verification">
-            ✅ <strong>Verified Channel</strong> • Free Forever • No Spam
-        </div>
-
-        <!-- Button 2 (Shocking/Shaking Animation) -->
-        <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn btn-dark" target="_blank" onclick="fbq('track', 'Lead');">
-            Join Now — It's 100% FREE
-        </a>
-
-        <!-- Timer -->
-        <div class="timer-notice">
-            ⏰ Limited time offer
-        </div>
-
-        <!-- Footer Quotes -->
-        <p class="footer-quote">“Aaj mehnat kar lo, kal naam apna khud banega.”</p>
-        <p class="footer-ads">Telegram Id { For Advertising } - @Ads2laabh</p>
-
+  <div class="container">
+    <!-- Live Traders Online -->
+    <div class="live-badge">
+      <span class="live-dot"></span>
+      <span>5,947 traders online now</span>
     </div>
+
+    <!-- Profile Info -->
+    <div class="profile-section">
+      <div class="avatar-container">
+        <!-- Photo URL yahan replace kar sakte hain -->
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300" alt="DR. VIKASH LADDHA" class="avatar">
+        <div class="verified-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+      </div>
+
+      <h1 class="name">King Of Nifty</h1>
+      <div class="sub-name">( DR. VIKASH LADDHA )</div>
+      <p class="tagline">🏆 India's No.1 Stock Market Channel</p>
+
+      <div class="rating">
+        <div class="stars">★★★★★</div>
+        <span class="rating-text">4.9/5 (2,340 reviews)</span>
+      </div>
+    </div>
+
+    <!-- Top CTA Button -->
+    <a href="https://t.me/+qEokwh0D-WlkNzJl" class="btn-primary" target="_blank">Join Free Telegram Channel &rarr;</a>
+
+    <!-- Statistics -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">50K+</div>
+        <div class="stat-label">Members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5+ Yrs</div>
+        <div class="stat-label">Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">Accuracy</div>
+      </div>
+    </div>
+
+    <!-- Pitch Heading -->
+    <div class="pitch-section">
+      <h2 class="pitch-title">Get <span class="highlight">FREE daily calls</span> for NIFTY, BANKNIFTY & SENSEX</h2>
+      <p class="pitch-subtitle">Join thousands of traders getting free premium analysis daily</p>
+    </div>
+
+    <!-- Urgency Card -->
+    <div class="urgency-banner">
+      🔥 7,589 people joined today — Limited FREE access!
+    </div>
+
+    <!-- Bottom CTA Button -->
+    <a href="https://t.me/+qEokwh0D-WlkNzJl" class="btn-primary" target="_blank">Join Free Telegram Channel &rarr;</a>
+
+    <!-- Features List Section -->
+    <div class="features-list">
+      <div class="feature-card">
+        <div class="feature-icon-box">
+          <i class="fa-solid fa-chart-column"></i>
+        </div>
+        <span class="feature-text">Daily Nifty & BankNifty Levels</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-box">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <span class="feature-text">No Paid Tips – Purely Educational</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-box">
+          <i class="fa-solid fa-hourglass-half"></i>
+        </div>
+        <span class="feature-text">5+ Years of Market Experience</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-box">
+          <i class="fa-solid fa-user-group"></i>
+        </div>
+        <span class="feature-text">50,000+ Subscribers Trust Us</span>
+      </div>
+    </div>
+
+    <!-- Footer Trust Info -->
+    <div class="trust-footer">
+      <i class="fa-solid fa-square-check verified-box"></i>
+      <span class="verified-text">Verified Channel</span>
+      <span class="trust-subtext">• Free Forever • No Spam</span>
+    </div>
+  </div>
 
 </body>
 </html>
