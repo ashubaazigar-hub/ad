@@ -18,7 +18,7 @@
             --neon-green: #00ff7f;
             --neon-glow: rgba(0, 255, 127, 0.5);
             --text-main: #ffffff;
-            --text-muted: #d0e8e0; /* Pehle se zyada bright aur highlight kiya gaya hai */
+            --text-muted: #d0e8e0;
         }
 
         * {
@@ -78,7 +78,7 @@
             object-fit: cover;
         }
 
-        /* Typography - Highlighted & Bold */
+        /* Typography */
         h1 {
             color: var(--text-main);
             font-size: 28px;
@@ -146,15 +146,15 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* CTA Button (Gap badhaya gaya hai logo aur text ke beech) */
+        /* CTA Button (Premium Texture: Metallic Gradient + Metallic Shine & Shadow) */
         .cta-btn {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 12px; /* Yahan gap thoda badha diya hai */
+            gap: 12px; 
             width: 100%;
-            background-color: var(--neon-green);
-            color: #000;
+            background: linear-gradient(135deg, #00ff87 0%, #60efff 50%, #00ff7f 100%); /* Premium Metallic Multi-color Glow */
+            color: #03140a;
             text-decoration: none;
             padding: 28px 8px; 
             border-radius: 40px;
@@ -163,16 +163,18 @@
             white-space: nowrap; 
             margin-bottom: 25px;
             border: 4px solid #ffffff; 
-            box-shadow: 0 8px 25px rgba(0, 255, 127, 0.4);
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6), inset 0 -4px 6px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 255, 127, 0.5);
             transition: transform 0.2s;
             animation: bubbling 1.5s infinite;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4); /* Premium text embossing */
         }
 
         .cta-btn svg {
             width: 20px;
             height: 20px;
             flex-shrink: 0;
-            fill: #000000; /* Logo ko bhi dark solid black kar diya hai highlight ke liye */
+            fill: #03140a;
+            filter: drop-shadow(0 1px 1px rgba(255,255,255,0.4));
         }
 
         .cta-btn:active {
@@ -180,9 +182,9 @@
         }
 
         @keyframes bubbling {
-            0% { box-shadow: 0 0 0 0 rgba(0, 255, 127, 0.8); }
-            70% { box-shadow: 0 0 0 22px rgba(0, 255, 127, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 255, 127, 0); }
+            0% { box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6), inset 0 -4px 6px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 255, 127, 0.8); }
+            70% { box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6), inset 0 -4px 6px rgba(0, 0, 0, 0.2), 0 0 0 22px rgba(0, 255, 127, 0); }
+            100% { box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6), inset 0 -4px 6px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 255, 127, 0); }
         }
 
         /* Bottom Features Box Style */
@@ -226,22 +228,22 @@
             text-overflow: ellipsis;
         }
 
-        /* Trust Footer Style - Highlighted */
+        /* Trust Footer Style (Ek hi line mein set kiya gaya hai) */
         .trust-footer {
             color: #ffffff;
-            font-size: 13.5px;
+            font-size: 13px;
             font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
-            flex-wrap: wrap;
+            gap: 5px;
+            white-space: nowrap;
             margin-top: 5px;
             text-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
         .verified-text {
-            color: #33bbff; /* Aur zyada bright blue highlight ke liye */
+            color: #33bbff; 
             font-weight: 800;
         }
 
@@ -285,13 +287,13 @@
             <div class="feature-item">📊 Swing Trades</div>
         </div>
 
-        <!-- Call to Action -->
+        <!-- Call to Action (Premium Texture + Updated Text) -->
         <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn" target="_blank">
             <!-- Left Telegram Logo -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
               <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
             </svg>
-            JOIN FREE TELEGRAM CHANNEL
+            JOIN TELEGRAM CHANNEL
             <!-- Right Telegram Logo -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
               <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
@@ -318,7 +320,7 @@
             </div>
         </div>
 
-        <!-- Trust Footer -->
+        <!-- Trust Footer (Ek line mein set kiya gaya hai) -->
         <div class="trust-footer">
             ✅ <span class="verified-text">Verified Channel</span> • Free Forever • No Spam
         </div>
