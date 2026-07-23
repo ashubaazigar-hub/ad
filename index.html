@@ -51,24 +51,12 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Top Badge */
-        .sebi-badge {
-            display: inline-block;
-            border: 1px solid var(--neon-green);
-            color: var(--neon-green);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-            margin-bottom: 25px;
-            background: rgba(0, 230, 118, 0.05);
-        }
-
         /* Logo Area */
         .logo-wrapper {
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
+            margin-top: 10px; /* Badge hatne ke baad upar ka space balance karne ke liye */
         }
 
         .logo-circle {
@@ -95,7 +83,7 @@
             color: var(--text-main);
             font-size: 26px;
             font-weight: 800;
-            margin-bottom: 25px; /* Subtitle hatne ke baad margin badha diya hai */
+            margin-bottom: 25px;
             letter-spacing: 0.5px;
         }
 
@@ -154,20 +142,21 @@
             border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
-        /* CTA Button (Thoda aur Lamba & Text k aage piche logo) */
+        /* CTA Button (Ek line, gap kam, aur lamba button) */
         .cta-btn {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 8px; /* Logo aur text ke beech ka gap */
+            gap: 5px; /* Logo aur text ke beech ka gap kam kiya gaya hai */
             width: 100%;
             background-color: var(--neon-green);
             color: #000;
             text-decoration: none;
-            padding: 28px 5px; /* Height badhane ke liye padding badha di */
+            padding: 28px 8px; 
             border-radius: 40px;
-            font-size: 18px; 
+            font-size: 16px; /* Ek line me fit rakhne ke liye font size set kiya hai */
             font-weight: 800;
+            white-space: nowrap; /* Text ko ek hi line me rakhne ke liye */
             margin-bottom: 25px;
             border: 4px solid #ffffff; 
             box-shadow: 0 6px 20px rgba(0, 230, 118, 0.3);
@@ -176,8 +165,8 @@
         }
 
         .cta-btn svg {
-            width: 22px;
-            height: 22px;
+            width: 18px;
+            height: 18px;
             flex-shrink: 0;
         }
 
@@ -226,7 +215,7 @@
             color: var(--text-main);
             font-size: 13.5px;
             font-weight: 500;
-            white-space: nowrap; /* Ye code line ko break hone se rokega */
+            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -254,9 +243,6 @@
 <body>
 
     <div class="app-container">
-        
-        <!-- Top Badge -->
-        <div class="sebi-badge">SEBI Registered Research Analyst</div>
 
         <!-- Logo/DP -->
         <div class="logo-wrapper">
@@ -292,7 +278,7 @@
             <div class="feature-item">📊 Swing Trades</div>
         </div>
 
-        <!-- Call to Action (Updated Text & Telegram Logos) -->
+        <!-- Call to Action (Ek line, gap kam, aur dono taraf logo) -->
         <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn" target="_blank">
             <!-- Left Telegram Logo -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
