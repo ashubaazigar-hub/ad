@@ -9,16 +9,16 @@
     
     <style>
         /* Import Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
         :root {
-            --bg-color: #050b08;
-            --card-bg: #0b1a14;
-            --box-bg: #11261d;
-            --neon-green: #00e676;
-            --neon-glow: rgba(0, 230, 118, 0.4);
+            --bg-color: #030705;
+            --card-bg: #07140f;
+            --box-bg: #0b1f17;
+            --neon-green: #00ff7f;
+            --neon-glow: rgba(0, 255, 127, 0.5);
             --text-main: #ffffff;
-            --text-muted: #a3b8b0;
+            --text-muted: #d0e8e0; /* Pehle se zyada bright aur highlight kiya gaya hai */
         }
 
         * {
@@ -41,14 +41,14 @@
         .app-container {
             width: 100%;
             max-width: 400px;
-            background: linear-gradient(180deg, #091e15 0%, #0d281c 50%, #081711 100%);
+            background: linear-gradient(180deg, #071b12 0%, #0a261a 50%, #05120c 100%);
             border-radius: 40px;
             padding: 30px 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
             text-align: center;
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Logo Area */
@@ -56,18 +56,18 @@
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
-            margin-top: 10px; /* Badge hatne ke baad upar ka space balance karne ke liye */
+            margin-top: 10px;
         }
 
         .logo-circle {
             width: 120px;
             height: 120px;
-            background: #101920; 
+            background: #000000; 
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 0 25px var(--neon-glow);
+            box-shadow: 0 0 30px var(--neon-glow);
             border: 3px solid var(--neon-green);
             overflow: hidden;
         }
@@ -78,13 +78,14 @@
             object-fit: cover;
         }
 
-        /* Typography */
+        /* Typography - Highlighted & Bold */
         h1 {
             color: var(--text-main);
-            font-size: 26px;
-            font-weight: 800;
+            font-size: 28px;
+            font-weight: 900;
             margin-bottom: 25px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         h1 span {
@@ -104,20 +105,22 @@
             flex: 1;
             padding: 15px 5px;
             border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .stat-val {
             color: var(--neon-green);
-            font-size: 18px;
-            font-weight: 700;
+            font-size: 19px;
+            font-weight: 800;
             margin-bottom: 2px;
+            text-shadow: 0 0 10px rgba(0, 255, 127, 0.3);
         }
 
         .stat-label {
             color: var(--text-muted);
-            font-size: 11px;
-            font-weight: 500;
+            font-size: 11.5px;
+            font-weight: 600;
         }
 
         /* Features Grid */
@@ -130,44 +133,46 @@
 
         .feature-item {
             background-color: var(--box-bg);
-            padding: 12px;
-            border-radius: 12px;
+            padding: 14px;
+            border-radius: 14px;
             color: var(--text-main);
-            font-size: 13px;
-            font-weight: 500;
+            font-size: 13.5px;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* CTA Button (Ek line, gap kam, aur lamba button) */
+        /* CTA Button (Gap badhaya gaya hai logo aur text ke beech) */
         .cta-btn {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 5px; /* Logo aur text ke beech ka gap kam kiya gaya hai */
+            gap: 12px; /* Yahan gap thoda badha diya hai */
             width: 100%;
             background-color: var(--neon-green);
             color: #000;
             text-decoration: none;
             padding: 28px 8px; 
             border-radius: 40px;
-            font-size: 16px; /* Ek line me fit rakhne ke liye font size set kiya hai */
-            font-weight: 800;
-            white-space: nowrap; /* Text ko ek hi line me rakhne ke liye */
+            font-size: 16px; 
+            font-weight: 950;
+            white-space: nowrap; 
             margin-bottom: 25px;
             border: 4px solid #ffffff; 
-            box-shadow: 0 6px 20px rgba(0, 230, 118, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 255, 127, 0.4);
             transition: transform 0.2s;
             animation: bubbling 1.5s infinite;
         }
 
         .cta-btn svg {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             flex-shrink: 0;
+            fill: #000000; /* Logo ko bhi dark solid black kar diya hai highlight ke liye */
         }
 
         .cta-btn:active {
@@ -175,9 +180,9 @@
         }
 
         @keyframes bubbling {
-            0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.8); }
-            70% { box-shadow: 0 0 0 20px rgba(0, 230, 118, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 127, 0.8); }
+            70% { box-shadow: 0 0 0 22px rgba(0, 255, 127, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 127, 0); }
         }
 
         /* Bottom Features Box Style */
@@ -191,19 +196,20 @@
         .bottom-feature-card {
             background-color: var(--box-bg);
             border-radius: 16px;
-            padding: 12px;
+            padding: 14px 16px;
             display: flex;
             align-items: center;
-            gap: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            gap: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             text-align: left;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .feature-icon-box {
-            background-color: rgba(255, 255, 255, 0.08);
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.12);
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -213,29 +219,30 @@
 
         .bottom-feature-text {
             color: var(--text-main);
-            font-size: 13.5px;
-            font-weight: 500;
+            font-size: 14px;
+            font-weight: 700;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
-        /* Trust Footer Style */
+        /* Trust Footer Style - Highlighted */
         .trust-footer {
-            color: var(--text-muted);
-            font-size: 13px;
-            font-weight: 500;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
+            gap: 6px;
             flex-wrap: wrap;
             margin-top: 5px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
         .verified-text {
-            color: #4da6ff; 
-            font-weight: 600;
+            color: #33bbff; /* Aur zyada bright blue highlight ke liye */
+            font-weight: 800;
         }
 
     </style>
@@ -278,15 +285,15 @@
             <div class="feature-item">📊 Swing Trades</div>
         </div>
 
-        <!-- Call to Action (Ek line, gap kam, aur dono taraf logo) -->
+        <!-- Call to Action -->
         <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn" target="_blank">
             <!-- Left Telegram Logo -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
               <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
             </svg>
-            JOIN TELEGRAM CHANNEL
+            JOIN FREE TELEGRAM CHANNEL
             <!-- Right Telegram Logo -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
               <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
             </svg>
         </a>
