@@ -1,1 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr Vikas Laddha - Profile</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      background-color: #f7f9fa;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Container Card */
+    .profile-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 28px;
+      padding: 32px 24px 24px 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Avatar DP Ring */
+    .avatar-wrapper {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid #e2c050;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(226, 192, 80, 0.25);
+      margin-bottom: 20px;
+      background-color: #eee;
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Name Heading */
+    .profile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    /* Subscribers Badge */
+    .subscribers-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #eaf7f1;
+      border: 1px solid #c8ebd9;
+      color: #1a7f53;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .badge-dot {
+      width: 9px;
+      height: 9px;
+      background-color: #5bbd8c;
+      border-radius: 50%;
+    }
+
+    /* Section Divider */
+    .divider-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background-color: #e5dac6;
+    }
+
+    .divider-text {
+      padding: 0 14px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #b89c68;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    /* Feature Cards List */
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .feature-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background-color: #ffffff;
+      border: 1px solid #eef0f2;
+      border-radius: 16px;
+      padding: 12px 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      text-align: left;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background-color: #f7f7f7;
+      border: 1px solid #eaeaea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .feature-text {
+      font-size: 15px;
+      font-weight: 500;
+      color: #555555;
+      line-height: 1.35;
+    }
+
+    /* Button Border Bubbling / Pulsing Animation */
+    @keyframes borderBubble {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 168, 232, 0.5);
+      }
+      70% {
+        box-shadow: 0 0 0 12px rgba(0, 168, 232, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 168, 232, 0);
+      }
+    }
+
+    /* Join Us Button */
+    .join-btn {
+      width: 100%;
+      background-color: #00a8e8;
+      color: #ffffff;
+      border: none;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      animation: borderBubble 2s infinite ease-in-out;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .join-btn:hover {
+      background-color: #0096d1;
+      transform: scale(1.01);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    
+    <!-- Profile DP (Image) -->
+    <div class="avatar-wrapper">
+      <img src="IMG-20260713-WA0000.jpg" alt="Dr Vikas Laddha" class="avatar-img">
+    </div>
+
+    <!-- Name -->
+    <h1 class="profile-name">Dr Vikas Laddha</h1>
+
+    <!-- Subscriber Count Badge -->
+    <div class="subscribers-badge">
+      <span class="badge-dot"></span>
+      174,000+ subscribers
+    </div>
+
+    <!-- Divider Section Header -->
+    <div class="divider-container">
+      <div class="divider-line"></div>
+      <span class="divider-text">Market Intelligence</span>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Feature Items -->
+    <div class="feature-list">
+      
+      <!-- Item 1 -->
+      <div class="feature-card">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </div>
+        <span class="feature-text">Daily Intraday Index & Stock Option Calls</span>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="feature-card">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+        </div>
+        <span class="feature-text">Short-Term & Long-Term Trading Ideas</span>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="feature-card">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </div>
+        <span class="feature-text">Proper Advanced Entry & Exit Points</span>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="feature-card">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <span class="feature-text">Effective Risk Management</span>
+      </div>
+
+    </div>
+
+    <!-- CTA Button with Link and Bubbling Border Animation -->
+    <a href="https://t.me/+qEokwh0D-WlkNzJl" target="_blank" rel="noopener noreferrer" class="join-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.38-3.6 3.99-1.65 4.82-1.94 5.36-1.95.12 0 .38.03.55.17.14.12.18.28.2.4.02.12.02.25 0 .38z"/>
+      </svg>
+      Join Us
+    </a>
+
+  </div>
+
+</body>
+</html>
