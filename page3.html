@@ -1,287 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr Vikas Laddha - Profile</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Vikas laddha</title>
 
-    body {
-      background-color: #f7f9fa;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
-    /* Container Card */
-    .profile-card {
-      background: #ffffff;
-      width: 100%;
-      max-width: 440px;
-      border-radius: 28px;
-      padding: 32px 24px 24px 24px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
 
-    /* Avatar DP Ring */
-    .avatar-wrapper {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: 3px solid #e2c050;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(226, 192, 80, 0.25);
-      margin-bottom: 20px;
-      background-color: #eee;
-    }
+        body {
+            background-color: #050a0f;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(0, 230, 118, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 90% 90%, rgba(0, 230, 118, 0.05) 0%, transparent 40%);
+        }
 
-    .avatar-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        .container {
+            width: 100%;
+            max-width: 440px;
+            background: linear-gradient(180deg, #0b141e 0%, #060c13 100%);
+            border-radius: 28px;
+            padding: 28px 20px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    /* Name Heading */
-    .profile-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
-    }
+        /* Live Badge */
+        .live-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 230, 118, 0.08);
+            border: 1px solid rgba(0, 230, 118, 0.25);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #00e676;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+        }
 
-    /* Subscribers Badge */
-    .subscribers-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background-color: #eaf7f1;
-      border: 1px solid #c8ebd9;
-      color: #1a7f53;
-      padding: 6px 18px;
-      border-radius: 50px;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 24px;
-    }
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00e676;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00e676;
+            animation: pulse 1.8s infinite;
+        }
 
-    .badge-dot {
-      width: 9px;
-      height: 9px;
-      background-color: #5bbd8c;
-      border-radius: 50%;
-    }
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.15); }
+            100% { opacity: 0.4; transform: scale(0.9); }
+        }
 
-    /* Section Divider */
-    .divider-container {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 20px;
-    }
+        /* Profile Avatar Logo */
+        .avatar-wrapper {
+            position: relative;
+            margin-bottom: 18px;
+        }
 
-    .divider-line {
-      flex: 1;
-      height: 1px;
-      background-color: #e5dac6;
-    }
+        .avatar-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #08121a;
+            border: 2px solid #00e676;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(0, 230, 118, 0.35);
+        }
 
-    .divider-text {
-      padding: 0 14px;
-      font-size: 11px;
-      font-weight: 700;
-      color: #b89c68;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-    }
+        .avatar-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    /* Feature Cards List */
-    .feature-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-      margin-bottom: 24px;
-    }
+        /* Title */
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
 
-    .feature-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background-color: #ffffff;
-      border: 1px solid #eef0f2;
-      border-radius: 16px;
-      padding: 12px 16px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-      text-align: left;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+        .title {
+            font-size: 28px;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
 
-    .feature-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
+        .tag-badge {
+            background: rgba(255, 179, 0, 0.08);
+            border: 1px solid rgba(255, 179, 0, 0.3);
+            color: #ffb300;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            white-space: nowrap;
+        }
 
-    .icon-box {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background-color: #f7f7f7;
-      border: 1px solid #eaeaea;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-    }
+        /* Stats Card */
+        .stats-card {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 18px 12px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
-    .feature-text {
-      font-size: 15px;
-      font-weight: 500;
-      color: #555555;
-      line-height: 1.35;
-    }
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
 
-    /* Button Border Bubbling / Pulsing Animation */
-    @keyframes borderBubble {
-      0% {
-        box-shadow: 0 0 0 0 rgba(0, 168, 232, 0.5);
-      }
-      70% {
-        box-shadow: 0 0 0 12px rgba(0, 168, 232, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(0, 168, 232, 0);
-      }
-    }
+        .stat-divider {
+            width: 1px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.08);
+        }
 
-    /* Join Us Button */
-    .join-btn {
-      width: 100%;
-      background-color: #00a8e8;
-      color: #ffffff;
-      border: none;
-      border-radius: 14px;
-      padding: 16px;
-      font-size: 18px;
-      font-weight: 600;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      text-decoration: none;
-      animation: borderBubble 2s infinite ease-in-out;
-      transition: background-color 0.2s ease, transform 0.2s ease;
-    }
+        .stat-number {
+            font-size: 20px;
+            font-weight: 800;
+            color: #00e676;
+            margin-bottom: 4px;
+        }
 
-    .join-btn:hover {
-      background-color: #0096d1;
-      transform: scale(1.01);
-    }
-  </style>
+        .stat-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: #8395a7;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Features Section */
+        .features-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .feature-icon-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(0, 230, 118, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 3px;
+        }
+
+        .feature-content p {
+            font-size: 12px;
+            color: #8395a7;
+            line-height: 1.35;
+        }
+
+        /* CTA Buttons with Bubbling Border Effect */
+        .cta-btn {
+            width: 100%;
+            background: #00e676;
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 800;
+            padding: 18px 24px;
+            border-radius: 18px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            margin-bottom: 18px;
+            
+            /* Bubbling / Pulsing Animation */
+            animation: bubblingBorder 2s infinite ease-in-out;
+            transition: transform 0.2s;
+        }
+
+        @keyframes bubblingBorder {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7), 0 8px 25px rgba(0, 230, 118, 0.35);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(0, 230, 118, 0), 0 12px 30px rgba(0, 230, 118, 0.6);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 230, 118, 0), 0 8px 25px rgba(0, 230, 118, 0.35);
+            }
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #617385;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="profile-card">
-    
-    <!-- Profile DP (Image) -->
-    <div class="avatar-wrapper">
-      <img src="IMG-20260713-WA0000.jpg" alt="Dr Vikas Laddha" class="avatar-img">
-    </div>
-
-    <!-- Name -->
-    <h1 class="profile-name">Dr Vikas Laddha</h1>
-
-    <!-- Subscriber Count Badge -->
-    <div class="subscribers-badge">
-      <span class="badge-dot"></span>
-      174,000+ subscribers
-    </div>
-
-    <!-- Divider Section Header -->
-    <div class="divider-container">
-      <div class="divider-line"></div>
-      <span class="divider-text">Market Intelligence</span>
-      <div class="divider-line"></div>
-    </div>
-
-    <!-- Feature Items -->
-    <div class="feature-list">
-      
-      <!-- Item 1 -->
-      <div class="feature-card">
-        <div class="icon-box">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="20" x2="18" y2="10"></line>
-            <line x1="12" y1="20" x2="12" y2="4"></line>
-            <line x1="6" y1="20" x2="6" y2="14"></line>
-          </svg>
+    <div class="container">
+        <!-- Live Status Badge -->
+        <div class="live-badge">
+            <span class="live-dot"></span>
+            <span>LIVE • 4,920+ ONLINE NOW</span>
         </div>
-        <span class="feature-text">Daily Intraday Index & Stock Option Calls</span>
-      </div>
 
-      <!-- Item 2 -->
-      <div class="feature-card">
-        <div class="icon-box">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-            <polyline points="17 6 23 6 23 12"></polyline>
-          </svg>
+        <!-- Profile Avatar / DP Image -->
+        <div class="avatar-wrapper">
+            <div class="avatar-circle">
+                <img src="IMG-20260713-WA0000.jpg" alt="Dr. Vikas laddha DP">
+            </div>
         </div>
-        <span class="feature-text">Short-Term & Long-Term Trading Ideas</span>
-      </div>
 
-      <!-- Item 3 -->
-      <div class="feature-card">
-        <div class="icon-box">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <circle cx="12" cy="12" r="6"></circle>
-            <circle cx="12" cy="12" r="2"></circle>
-          </svg>
+        <!-- Main Heading -->
+        <div class="title-wrapper">
+            <h1 class="title">Dr. Vikas laddha</h1>
         </div>
-        <span class="feature-text">Proper Advanced Entry & Exit Points</span>
-      </div>
 
-      <!-- Item 4 -->
-      <div class="feature-card">
-        <div class="icon-box">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
+        <!-- Specialty Tag -->
+        <div class="tag-badge">
+            India's No.1 Stock Market Channel
         </div>
-        <span class="feature-text">Effective Risk Management</span>
-      </div>
 
+        <!-- Key Statistics Card -->
+        <div class="stats-card">
+            <div class="stat-item">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Members</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">10+ Yrs</div>
+                <div class="stat-label">Experience</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">99.6%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+        </div>
+
+        <!-- Top Telegram Button -->
+        <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn" target="_blank">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" stroke="none">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 6.63 5.37 12 12 12s12-5.37 12-12C24 5.37 18.63 0 12 0zm5.89 8.22l-2.02 9.53c-.15.68-.56.84-1.13.53l-3.11-2.29-1.5 1.44c-.17.17-.31.31-.63.31l.22-3.17 5.77-5.21c.25-.22-.05-.35-.39-.13l-7.14 4.5-3.08-.96c-.67-.21-.68-.67.14-.99l12.03-4.64c.56-.2 1.05.14.84.88z"/>
+            </svg>
+            JOIN TELEGRAM NOW
+        </a>
+
+        <!-- Feature List -->
+        <div class="features-container">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e676" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>Daily Intraday Index & Stock Option</h4>
+                    <p>High precision market analysis & calls</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e676" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>No Paid Tips</h4>
+                    <p>Purely Educational</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e676" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>Safe Trading Strategy</h4>
+                    <p>Verified capital protection & risk management</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Telegram Button -->
+        <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn" target="_blank">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" stroke="none">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 6.63 5.37 12 12 12s12-5.37 12-12C24 5.37 18.63 0 12 0zm5.89 8.22l-2.02 9.53c-.15.68-.56.84-1.13.53l-3.11-2.29-1.5 1.44c-.17.17-.31.31-.63.31l.22-3.17 5.77-5.21c.25-.22-.05-.35-.39-.13l-7.14 4.5-3.08-.96c-.67-.21-.68-.67.14-.99l12.03-4.64c.56-.2 1.05.14.84.88z"/>
+            </svg>
+            JOIN TELEGRAM NOW
+        </a>
+
+        <!-- Footer Note -->
+        <div class="footer-note">
+            <span>✅ Verified Channel • Free Forever • No Spam</span>
+        </div>
     </div>
-
-    <!-- CTA Button with Link and Bubbling Border Animation -->
-    <a href="https://t.me/+qEokwh0D-WlkNzJl" target="_blank" rel="noopener noreferrer" class="join-btn">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.38-3.6 3.99-1.65 4.82-1.94 5.36-1.95.12 0 .38.03.55.17.14.12.18.28.2.4.02.12.02.25 0 .38z"/>
-      </svg>
-      Join Us
-    </a>
-
-  </div>
 
 </body>
 </html>
