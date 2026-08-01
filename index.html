@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Vikash Laddha</title>
-    
+    <title>Dr. Vikas laddha</title>
+
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -15,330 +15,379 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '4490799507824243');
+    fbq('init', '2917091888627429');
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=4490799507824243&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=2917091888627429&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Import Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-
-        :root {
-            --bg-color: #030705;
-            --card-bg: #07140f;
-            --box-bg: #0b1f17;
-            --neon-green: #00ff7f;
-            --neon-glow: rgba(0, 255, 127, 0.5);
-            --text-main: #ffffff;
-            --text-muted: #d0e8e0;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
+            background-color: #050a0f;
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 16px;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(0, 230, 118, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 90% 90%, rgba(0, 230, 118, 0.05) 0%, transparent 40%);
         }
 
-        /* Main Phone-like Container */
-        .app-container {
+        .container {
             width: 100%;
-            max-width: 400px;
-            background: linear-gradient(180deg, #071b12 0%, #0a261a 50%, #05120c 100%);
-            border-radius: 40px;
-            padding: 30px 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Logo Area */
-        .logo-wrapper {
+            max-width: 440px;
+            background: linear-gradient(180deg, #0b141e 0%, #060c13 100%);
+            border-radius: 28px;
+            padding: 28px 20px 24px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
             display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            margin-top: 10px;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .logo-circle {
+        /* Live Badge */
+        .live-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 230, 118, 0.08);
+            border: 1px solid rgba(0, 230, 118, 0.25);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #00e676;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00e676;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00e676;
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.15); }
+            100% { opacity: 0.4; transform: scale(0.9); }
+        }
+
+        /* Profile Avatar Logo */
+        .avatar-wrapper {
+            position: relative;
+            margin-bottom: 18px;
+        }
+
+        .avatar-circle {
             width: 120px;
             height: 120px;
-            background: #000000; 
             border-radius: 50%;
+            background: #08121a;
+            border: 2px solid #00e676;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 0 30px var(--neon-glow);
-            border: 3px solid var(--neon-green);
             overflow: hidden;
+            box-shadow: 0 0 25px rgba(0, 230, 118, 0.35);
         }
-        
-        .logo-circle img {
+
+        .avatar-circle img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        /* Typography */
-        h1 {
-            color: var(--text-main);
-            font-size: 28px;
-            font-weight: 900;
-            margin-bottom: 25px;
-            letter-spacing: 0.8px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        h1 span {
-            color: var(--neon-green);
-        }
-
-        /* Stats Row */
-        .stats-container {
+        /* Title */
+        .title-wrapper {
             display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            margin-bottom: 25px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
         }
 
-        .stat-box {
-            background-color: var(--box-bg);
-            flex: 1;
-            padding: 15px 5px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        .stat-val {
-            color: var(--neon-green);
-            font-size: 19px;
+        .title {
+            font-size: 28px;
             font-weight: 800;
-            margin-bottom: 2px;
-            text-shadow: 0 0 10px rgba(0, 255, 127, 0.3);
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .tag-badge {
+            background: rgba(255, 179, 0, 0.08);
+            border: 1px solid rgba(255, 179, 0, 0.3);
+            color: #ffb300;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            white-space: nowrap;
+        }
+
+        /* Stats Card */
+        .stats-card {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 18px 12px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-number {
+            font-size: 20px;
+            font-weight: 800;
+            color: #00e676;
+            margin-bottom: 4px;
         }
 
         .stat-label {
-            color: var(--text-muted);
-            font-size: 11.5px;
-            font-weight: 600;
-        }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 25px;
-        }
-
-        .feature-item {
-            background-color: var(--box-bg);
-            padding: 14px;
-            border-radius: 14px;
-            color: var(--text-main);
-            font-size: 13.5px;
+            font-size: 10px;
             font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            color: #8395a7;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
-        /* CTA Button */
-        .cta-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 12px; 
+        /* Features Section */
+        .features-container {
             width: 100%;
-            background-color: var(--neon-green);
-            color: #000;
-            text-decoration: none;
-            padding: 28px 8px; 
-            border-radius: 40px;
-            font-size: 16px; 
-            font-weight: 950;
-            white-space: nowrap; 
-            margin-bottom: 25px;
-            border: 4px solid #ffffff; 
-            box-shadow: 0 8px 25px rgba(0, 255, 127, 0.4);
-            transition: transform 0.2s;
-            animation: bubbling 1.5s infinite;
-        }
-
-        .cta-btn svg {
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
-            fill: #000000;
-        }
-
-        .cta-btn:active {
-            transform: scale(0.95);
-        }
-
-        @keyframes bubbling {
-            0% { box-shadow: 0 0 0 0 rgba(0, 255, 127, 0.8); }
-            70% { box-shadow: 0 0 0 22px rgba(0, 255, 127, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 255, 127, 0); }
-        }
-
-        /* Bottom Features Box Style */
-        .bottom-features-container {
             display: flex;
             flex-direction: column;
             gap: 12px;
             margin-bottom: 20px;
         }
 
-        .bottom-feature-card {
-            background-color: var(--box-bg);
+        .feature-card {
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 16px;
-            padding: 14px 16px;
+            padding: 16px;
             display: flex;
             align-items: center;
-            gap: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            text-align: left;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            gap: 16px;
         }
 
         .feature-icon-box {
-            background-color: rgba(255, 255, 255, 0.12);
-            width: 42px;
-            height: 42px;
+            width: 44px;
+            height: 44px;
             border-radius: 12px;
+            background: rgba(0, 230, 118, 0.1);
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: 20px;
+            justify-content: center;
             flex-shrink: 0;
         }
 
-        .bottom-feature-text {
-            color: var(--text-main);
-            font-size: 14px;
+        .feature-content h4 {
+            font-size: 15px;
             font-weight: 700;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            color: #ffffff;
+            margin-bottom: 3px;
         }
 
-        /* Trust Footer Style */
-        .trust-footer {
+        .feature-content p {
+            font-size: 12px;
+            color: #8395a7;
+            line-height: 1.35;
+        }
+
+        /* CTA Buttons with Bubbling Border Effect */
+        .cta-btn {
+            width: 100%;
+            background: #00e676;
             color: #ffffff;
-            font-size: 13px;
-            font-weight: 700;
+            font-size: 17px;
+            font-weight: 800;
+            padding: 18px 24px;
+            border-radius: 18px;
+            border: none;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
-            white-space: nowrap;
-            margin-top: 5px;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            gap: 10px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            margin-bottom: 18px;
+            
+            /* Bubbling / Pulsing Animation */
+            animation: bubblingBorder 2s infinite ease-in-out;
+            transition: transform 0.2s;
         }
 
-        .verified-text {
-            color: #33bbff; 
-            font-weight: 800;
+        @keyframes bubblingBorder {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7), 0 8px 25px rgba(0, 230, 118, 0.35);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(0, 230, 118, 0), 0 12px 30px rgba(0, 230, 118, 0.6);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 230, 118, 0), 0 8px 25px rgba(0, 230, 118, 0.35);
+            }
         }
 
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #617385;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <div class="app-container">
+    <div class="container">
+        <!-- Live Status Badge -->
+        <div class="live-badge">
+            <span class="live-dot"></span>
+            <span>LIVE • 4,920+ ONLINE NOW</span>
+        </div>
 
-        <!-- Logo/DP -->
-        <div class="logo-wrapper">
-            <div class="logo-circle">
-                <img src="IMG-20260713-WA0000.jpg" alt="Dr. Vikash Laddha">
+        <!-- Profile Avatar / DP Image -->
+        <div class="avatar-wrapper">
+            <div class="avatar-circle">
+                <img src="IMG-20260713-WA0000.jpg" alt="Dr. Vikas laddha DP">
             </div>
         </div>
 
-        <!-- Headings -->
-        <h1>DR. VIKASH <span>LADDHA</span></h1>
+        <!-- Main Heading -->
+        <div class="title-wrapper">
+            <h1 class="title">Dr. Vikas laddha</h1>
+        </div>
 
-        <!-- Stats -->
-        <div class="stats-container">
-            <div class="stat-box">
-                <div class="stat-val">60K+</div>
+        <!-- Specialty Tag -->
+        <div class="tag-badge">
+            India's No.1 Stock Market Channel
+        </div>
+
+        <!-- Key Statistics Card -->
+        <div class="stats-card">
+            <div class="stat-item">
+                <div class="stat-number">50K+</div>
                 <div class="stat-label">Members</div>
             </div>
-            <div class="stat-box">
-                <div class="stat-val">SEBI</div>
-                <div class="stat-label">Registered</div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">10+Yrs</div>
+                <div class="stat-label">Experience</div>
             </div>
-            <div class="stat-box">
-                <div class="stat-val">FREE</div>
-                <div class="stat-label">Join</div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number">99.6%</div>
+                <div class="stat-label">Accuracy</div>
             </div>
         </div>
 
-        <!-- Features Grid -->
-        <div class="features-grid">
-            <div class="feature-item">📈 Nifty Calls</div>
-            <div class="feature-item">🏦 Bank Nifty</div>
-            <div class="feature-item">💹 Finnifty</div>
-            <div class="feature-item">📊 Swing Trades</div>
-        </div>
-
-        <!-- Call to Action -->
+        <!-- Top Telegram Button -->
         <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn" target="_blank">
-            <!-- Left Telegram Logo -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" stroke="none">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 6.63 5.37 12 12 12s12-5.37 12-12C24 5.37 18.63 0 12 0zm5.89 8.22l-2.02 9.53c-.15.68-.56.84-1.13.53l-3.11-2.29-1.5 1.44c-.17.17-.31.31-.63.31l.22-3.17 5.77-5.21c.25-.22-.05-.35-.39-.13l-7.14 4.5-3.08-.96c-.67-.21-.68-.67.14-.99l12.03-4.64c.56-.2 1.05.14.84.88z"/>
             </svg>
-            JOIN TELEGRAM CHANNEL
-            <!-- Right Telegram Logo -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
-            </svg>
+            JOIN TELEGRAM NOW
         </a>
 
-        <!-- Bottom Features -->
-        <div class="bottom-features-container">
-            <div class="bottom-feature-card">
-                <div class="feature-icon-box">📊</div>
-                <div class="bottom-feature-text">Daily Nifty & BankNifty Levels</div>
+        <!-- Feature List -->
+        <div class="features-container">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e676" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>Daily Nifty & BankNifty Levels</h4>
+                    <p>High precision market analysis & calls</p>
+                </div>
             </div>
-            <div class="bottom-feature-card">
-                <div class="feature-icon-box">🎓</div>
-                <div class="bottom-feature-text">No Paid Tips – Purely Educational</div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e676" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>High Accuracy Signals</h4>
+                    <p>Live Entry & Exit Updates</p>
+                </div>
             </div>
-            <div class="bottom-feature-card">
-                <div class="feature-icon-box">⏳</div>
-                <div class="bottom-feature-text">5+ Years of Market Experience</div>
-            </div>
-            <div class="bottom-feature-card">
-                <div class="feature-icon-box">👥</div>
-                <div class="bottom-feature-text">60,000+ Subscribers Trust Us</div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e676" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>10+Years of Market Experience</h4>
+                    <p>Proven market expertise & guidance</p>
+                </div>
             </div>
         </div>
 
-        <!-- Trust Footer -->
-        <div class="trust-footer">
-            ✅ <span class="verified-text">Verified Channel</span> • Free Forever • No Spam
-        </div>
+        <!-- Bottom Telegram Button -->
+        <a href="https://t.me/+qEokwh0D-WlkNzJl" class="cta-btn" target="_blank">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" stroke="none">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 6.63 5.37 12 12 12s12-5.37 12-12C24 5.37 18.63 0 12 0zm5.89 8.22l-2.02 9.53c-.15.68-.56.84-1.13.53l-3.11-2.29-1.5 1.44c-.17.17-.31.31-.63.31l.22-3.17 5.77-5.21c.25-.22-.05-.35-.39-.13l-7.14 4.5-3.08-.96c-.67-.21-.68-.67.14-.99l12.03-4.64c.56-.2 1.05.14.84.88z"/>
+            </svg>
+            JOIN TELEGRAM NOW
+        </a>
 
+        <!-- Footer Note -->
+        <div class="footer-note">
+            <span>✅ Verified Channel • Free Forever • No Spam</span>
+        </div>
     </div>
 
 </body>
