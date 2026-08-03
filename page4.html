@@ -23,28 +23,40 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            padding-bottom: 90px; /* Space for sticky bottom bar */
+            padding-bottom: 100px; /* Space for sticky bottom bar */
         }
 
-        /* Top Banner */
-        .top-banner {
+        /* Top Online Status Banner */
+        .online-banner {
             width: 100%;
-            background: linear-gradient(90deg, #0088cc, #00b4d8);
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
             text-align: center;
             padding: 10px 15px;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
         }
 
-        .top-banner a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 13px;
-            letter-spacing: 0.5px;
-            display: block;
+        .online-banner .dot {
+            color: #22c55e;
+            font-size: 20px;
+            line-height: 1;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
         }
 
         /* Main Container */
@@ -66,8 +78,8 @@
         }
 
         .logo-img {
-            width: 90px;
-            height: 90px;
+            width: 95px;
+            height: 95px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #0088cc;
@@ -124,8 +136,9 @@
             color: #94a3b8;
         }
 
-        /* Telegram CTA Button */
+        /* Telegram CTA Button with Border Bubbling Animation */
         .btn-telegram {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -138,19 +151,42 @@
             padding: 14px 20px;
             border-radius: 30px;
             box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
+            z-index: 1;
+            transition: transform 0.2s ease;
+        }
+
+        /* Border Bubbling Effect Layers */
+        .btn-telegram::before, 
+        .btn-telegram::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 30px;
+            border: 2px solid #38bdf8;
+            z-index: -1;
+            animation: borderBubbling 2s infinite ease-out;
+        }
+
+        .btn-telegram::after {
+            animation-delay: 1s;
+        }
+
+        @keyframes borderBubbling {
+            0% {
+                transform: scale(1, 1);
+                opacity: 0.9;
+            }
+            100% {
+                transform: scale(1.08, 1.25);
+                opacity: 0;
+            }
         }
 
         .btn-telegram:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
         }
 
         /* Features Section */
@@ -197,25 +233,27 @@
             line-height: 1.4;
         }
 
-        /* Disclaimer Card */
-        .disclaimer-card {
-            background: rgba(239, 68, 68, 0.08);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 25px;
+        /* Verified Badge Footer Info */
+        .verified-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #38bdf8;
+            text-align: center;
+            padding: 15px 10px;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 10px;
+            border: 1px dashed rgba(56, 189, 248, 0.2);
         }
 
-        .disclaimer-card h2 {
-            font-size: 14px;
-            color: #ef4444;
-            margin-bottom: 6px;
-        }
-
-        .disclaimer-card p {
-            font-size: 11px;
-            color: #cbd5e1;
-            line-height: 1.5;
+        .verified-info svg {
+            width: 16px;
+            height: 16px;
+            fill: #38bdf8;
+            flex-shrink: 0;
         }
 
         /* Fixed Bottom Sticky Bar */
@@ -238,36 +276,21 @@
             max-width: 480px;
             padding: 12px 20px;
         }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            font-size: 12px;
-            color: #64748b;
-        }
-
-        footer a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: 600;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Top Banner -->
-    <div class="top-banner">
-        <a href="https://t.me/YOUR_TELEGRAM_LINK" target="_blank">
-            🚀 JOIN FREE TELEGRAM CHANNEL
-        </a>
+    <!-- Top Online Status Banner -->
+    <div class="online-banner">
+        <span class="dot">•</span>72, 379 Traders Online Now
     </div>
 
     <div class="container">
         
         <!-- Hero Card -->
         <div class="hero-card">
-            <!-- Apne Logo ki Image Yaha Set Karein -->
-            <img src="https://via.placeholder.com/90/0088cc/ffffff?text=Logo" alt="Baadshah Broking" class="logo-img">
+            <!-- Profile DP Image -->
+            <img src="IMG-20260728-WA0001.jpg" alt="King Of Nifty Logo" class="logo-img">
             
             <h1>King Of Nifty</h1>
             <div class="badge">⭐ Trusted Trading Community</div>
@@ -293,7 +316,7 @@
             </div>
 
             <!-- Main CTA Button -->
-            <a href="https://t.me/YOUR_TELEGRAM_LINK" target="_blank" class="btn-telegram">
+            <a href="https://t.me/+OQk68ITN7zU1YTA1" target="_blank" class="btn-telegram">
                 Join Telegram Now 🚀
             </a>
         </div>
@@ -325,29 +348,22 @@
             </div>
         </div>
 
-        <!-- Risk Disclaimer -->
-        <div class="disclaimer-card">
-            <h2>Risk Disclaimer</h2>
-            <p>
-                Trading and investing involve risk. This Telegram community shares educational information only and does not provide personalized financial advice.
-            </p>
+        <!-- Verified Info Text at Bottom -->
+        <div class="verified-info">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            <span>Verified Channel · Free Forever · No Spam</span>
         </div>
-
-        <!-- Footer -->
-        <footer>
-            Ads Managed By 
-            <a href="https://t.me/YOUR_ADS_LINK" target="_blank">Snow ads</a>
-        </footer>
 
     </div>
 
     <!-- Fixed Bottom Sticky Bar -->
     <div class="fixed-bottom">
-        <a href="https://t.me/YOUR_TELEGRAM_LINK" target="_blank" class="btn-telegram">
+        <a href="https://t.me/+OQk68ITN7zU1YTA1" target="_blank" class="btn-telegram">
             JOIN FREE TELEGRAM 🚀
         </a>
     </div>
 
 </body>
 </html>
-
