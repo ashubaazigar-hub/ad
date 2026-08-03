@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Of Nifty - Join Telegram Channel</title>
+    
+    <!-- Google Font (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #0d1117;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-bottom: 90px; /* Space for sticky bottom bar */
+        }
+
+        /* Top Banner */
+        .top-banner {
+            width: 100%;
+            background: linear-gradient(90deg, #0088cc, #00b4d8);
+            text-align: center;
+            padding: 10px 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
+
+        .top-banner a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            display: block;
+        }
+
+        /* Main Container */
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 20px 15px;
+        }
+
+        /* Hero Card */
+        .hero-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 25px;
+        }
+
+        .logo-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0088cc;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(0, 136, 204, 0.4);
+        }
+
+        .hero-card h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0, 136, 204, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background: #0d1117;
+            padding: 15px 10px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #21262d;
+        }
+
+        .stat-item h2 {
+            font-size: 18px;
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        .stat-item span {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        /* Telegram CTA Button */
+        .btn-telegram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #0088cc, #229ed9);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 14px 20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        /* Features Section */
+        .features-section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .feature-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            padding: 15px;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .feature-card h3 {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .feature-card p {
+            font-size: 11px;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        /* Disclaimer Card */
+        .disclaimer-card {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+
+        .disclaimer-card h2 {
+            font-size: 14px;
+            color: #ef4444;
+            margin-bottom: 6px;
+        }
+
+        .disclaimer-card p {
+            font-size: 11px;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        /* Fixed Bottom Sticky Bar */
+        .fixed-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #161b22;
+            border-top: 1px solid #30363d;
+            padding: 12px 15px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fixed-bottom .btn-telegram {
+            width: 100%;
+            max-width: 480px;
+            padding: 12px 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        footer a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <a href="https://t.me/YOUR_TELEGRAM_LINK" target="_blank">
+            🚀 JOIN FREE TELEGRAM CHANNEL
+        </a>
+    </div>
+
+    <div class="container">
+        
+        <!-- Hero Card -->
+        <div class="hero-card">
+            <!-- Apne Logo ki Image Yaha Set Karein -->
+            <img src="https://via.placeholder.com/90/0088cc/ffffff?text=Logo" alt="Baadshah Broking" class="logo-img">
+            
+            <h1>King Of Nifty</h1>
+            <div class="badge">⭐ Trusted Trading Community</div>
+            
+            <p class="description">
+                Join India's Fast Growing Telegram Community for Educational Market Analysis, Learning Resources & Daily Updates.
+            </p>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h2>10K+</h2>
+                    <span>Members</span>
+                </div>
+                <div class="stat-item">
+                    <h2>4.9★</h2>
+                    <span>Rating</span>
+                </div>
+                <div class="stat-item">
+                    <h2>Daily</h2>
+                    <span>Updates</span>
+                </div>
+            </div>
+
+            <!-- Main CTA Button -->
+            <a href="https://t.me/YOUR_TELEGRAM_LINK" target="_blank" class="btn-telegram">
+                Join Telegram Now 🚀
+            </a>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <h2 class="section-title">Why Join Us?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Market Analysis</h3>
+                    <p>Educational charts & market insights.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Daily Updates</h3>
+                    <p>Regular market news and learning content.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Alerts</h3>
+                    <p>Stay informed with timely educational updates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Trading Education</h3>
+                    <p>Learn trading concepts and strategies.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk Disclaimer -->
+        <div class="disclaimer-card">
+            <h2>Risk Disclaimer</h2>
+            <p>
+                Trading and investing involve risk. This Telegram community shares educational information only and does not provide personalized financial advice.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            Ads Managed By 
+            <a href="https://t.me/YOUR_ADS_LINK" target="_blank">Snow ads</a>
+        </footer>
+
+    </div>
+
+    <!-- Fixed Bottom Sticky Bar -->
+    <div class="fixed-bottom">
+        <a href="https://t.me/YOUR_TELEGRAM_LINK" target="_blank" class="btn-telegram">
+            JOIN FREE TELEGRAM 🚀
+        </a>
+    </div>
+
+</body>
+</html>
+
