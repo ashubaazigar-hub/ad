@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>King Of Nifty - Join Telegram Channel</title>
     
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1962561174421533');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1962561174421533&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <!-- Google Font (Poppins) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -76,15 +94,15 @@
             margin-bottom: 25px;
         }
 
-        /* DP Image (Border matches Yellow Button Color) */
+        /* DP Image (Yellow Border & Glow) */
         .logo-img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #facc15; /* Yellow Border */
+            border: 3px solid #facc15;
             margin-bottom: 15px;
-            box-shadow: 0 0 18px rgba(250, 204, 21, 0.5); /* Yellow Glow */
+            box-shadow: 0 0 18px rgba(250, 204, 21, 0.5);
         }
 
         .hero-card h1 {
@@ -127,7 +145,7 @@
 
         .stat-item h2 {
             font-size: 18px;
-            color: #facc15; /* Yellow Highlight */
+            color: #facc15;
             font-weight: 800;
         }
 
@@ -143,8 +161,8 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            background: linear-gradient(135deg, #facc15, #eab308); /* Peele (Yellow) Gradient */
-            color: #000000; /* Dark Text for Best Readability */
+            background: linear-gradient(135deg, #facc15, #eab308);
+            color: #000000;
             text-decoration: none;
             font-size: 18px;
             font-weight: 800;
@@ -155,7 +173,7 @@
             transition: transform 0.2s ease;
         }
 
-        /* Border Bubbling Effect Layers (Color: Yellow #facc15) */
+        /* Border Bubbling Effect Layers (Yellow #facc15) */
         .btn-telegram::before, 
         .btn-telegram::after {
             content: '';
@@ -257,7 +275,7 @@
             flex-shrink: 0;
         }
 
-        /* Floating Bottom Button (Without Box Wrapper) */
+        /* Floating Bottom Button */
         .fixed-bottom {
             position: fixed;
             bottom: 20px;
@@ -288,7 +306,7 @@
         <!-- Hero Card -->
         <div class="hero-card">
             <!-- Profile DP Image -->
-            <img src="IMG-20260713-WA0000.jpg" alt="King Of Nifty Logo" class="logo-img">
+            <img src="IMG-20260713-WA0000.jpg" alt="DR. VIKASH LADDHA Logo" class="logo-img">
             
             <h1>King Of Nifty</h1>
             <div class="badge">⭐ Trusted Trading Community</div>
@@ -297,7 +315,7 @@
                 Join India's Fast Growing Telegram Community for Educational Market Analysis, Learning Resources & Daily Updates.
             </p>
 
-            <!-- Stats (Updated to 50K+) -->
+            <!-- Stats -->
             <div class="stats-grid">
                 <div class="stat-item">
                     <h2>50K+</h2>
@@ -313,8 +331,8 @@
                 </div>
             </div>
 
-            <!-- Main CTA Button -->
-            <a href="https://t.me/+OQk68ITN7zU1YTA1" target="_blank" class="btn-telegram">
+            <!-- Main CTA Button (With Pixel Lead Tracking) -->
+            <a href="https://t.me/+OQk68ITN7zU1YTA1" onclick="fbq('track', 'Lead');" target="_blank" class="btn-telegram">
                 Join Telegram Now 🚀
             </a>
         </div>
@@ -356,9 +374,9 @@
 
     </div>
 
-    <!-- Floating Bottom Sticky Button -->
+    <!-- Floating Bottom Sticky Button (With Pixel Lead Tracking) -->
     <div class="fixed-bottom">
-        <a href="https://t.me/+OQk68ITN7zU1YTA1" target="_blank" class="btn-telegram">
+        <a href="https://t.me/+OQk68ITN7zU1YTA1" onclick="fbq('track', 'Lead');" target="_blank" class="btn-telegram">
             JOIN FREE TELEGRAM 🚀
         </a>
     </div>
