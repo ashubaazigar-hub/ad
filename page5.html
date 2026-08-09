@@ -47,14 +47,14 @@
       text-align: center;
     }
 
-    /* DP Without Bubbling Animation */
+    /* DP (Static Yellow Border, No Bubbling) */
     .avatar-wrapper {
       width: 140px;
       height: 140px;
       margin: 0 auto 24px auto;
       border-radius: 50%;
       overflow: hidden;
-      border: 4px solid #ffcc00; /* Normal Yellow Border */
+      border: 4px solid #ffcc00; 
     }
 
     .avatar-wrapper img {
@@ -134,7 +134,7 @@
       transform: translateY(-2px);
     }
 
-    /* 3 Minutes Redirecting Text */
+    /* 15 Seconds Redirecting Text */
     .redirect-text {
       color: #64748b;
       font-size: 15px;
@@ -196,14 +196,14 @@
       <p>Trusted By 32.067+ Members</p>
     </div>
 
-    <!-- Yellow Button (Bold Text + Bubbling Border) -->
+    <!-- Yellow Button -->
     <a href="https://t.me/+JlCKEm_37atmZDVl" class="btn-telegram" id="telegramBtn">
       🚀 Free Telegram Channel
     </a>
 
-    <!-- 15 seconds Countdown Text -->
+    <!-- 15 Seconds Countdown Text -->
     <p class="redirect-text">
-      Redirecting in <span id="countdown">15</span> second...
+      Redirecting in <span id="countdown">15</span> seconds...
     </p>
 
     <!-- Description List -->
@@ -219,30 +219,20 @@
   </div>
 
   <script>
-    // 15 Seconds Timer (15 Seconds)
-    let totalSeconds = 180;
+    // 15 Seconds Timer
+    let seconds = 15;
     const countdownElement = document.getElementById('countdown');
     const telegramLink = "https://t.me/+JlCKEm_37atmZDVl";
 
-    function updateCountdownDisplay() {
-      const minutes = Math.floor(totalSeconds / 60);
-      const seconds = totalSeconds % 60;
-      
-      const formattedMinutes = String(minutes).padStart(2, '0');
-      const formattedSeconds = String(seconds).padStart(2, '0');
-      
-      if (countdownElement) {
-        countdownElement.textContent = `${formattedMinutes}:${formattedSeconds}`;
-      }
-    }
-
     const timer = setInterval(() => {
-      totalSeconds--;
-      updateCountdownDisplay();
+      seconds--;
+      if (countdownElement) {
+        countdownElement.textContent = seconds;
+      }
       
-      if (totalSeconds <= 0) {
+      if (seconds <= 0) {
         clearInterval(timer);
-        window.location.href = telegramLink; // 15 Seconds baad auto redirect
+        window.location.href = telegramLink; // 15 seconds baad auto redirect
       }
     }, 1000);
   </script>
