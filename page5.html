@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baazigar Vip Matka</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
+    body {
+      background-color: #0b141d;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 15px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 440px; /* Halka sa chora layout */
+      text-align: center;
+    }
+
+    /* DP Animation & Border Effect (Yellow Bubbling Glow) */
+    @keyframes bubbling {
+      0% {
+        box-shadow: 0 0 0 0px rgba(255, 204, 0, 0.8);
+      }
+      50% {
+        box-shadow: 0 0 0 18px rgba(255, 204, 0, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0px rgba(255, 204, 0, 0);
+      }
+    }
+
+    .avatar-wrapper {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 24px auto;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #ffcc00; /* Yellow Border */
+      animation: bubbling 1.8s infinite ease-in-out; /* Bubbling Effect */
+    }
+
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Title */
+    .title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    /* Subscribers & Live Indicator */
+    .subscribers {
+      color: #22c55e;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .live-badge {
+      background-color: #dc2626;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    /* Peele Colour Ka Wide Button */
+    .btn-telegram {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background-color: #ffcc00; /* Peela Color */
+      color: #000000; /* Dark Text */
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: 800;
+      padding: 18px 24px; /* Halka sa chora aur bada */
+      border-radius: 16px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 18px rgba(255, 204, 0, 0.4);
+      text-transform: uppercase;
+    }
+
+    .btn-telegram:hover {
+      background-color: #e6b800;
+      transform: translateY(-2px);
+    }
+
+    /* 15 Second Redirecting Text */
+    .redirect-text {
+      color: #64748b;
+      font-size: 15px;
+      margin-top: 18px;
+      margin-bottom: 40px;
+    }
+
+    /* Description Section */
+    .description-section {
+      text-align: left;
+    }
+
+    .description-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+
+    .check-icon {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- DP with Yellow Bubbling Border -->
+    <div class="avatar-wrapper">
+      <img src="IMG_20260715_205338_752.jpg" alt="Baazigar Vip Matka">
+    </div>
+
+    <!-- Title Change -->
+    <h1 class="title">Baazigar Vip Matka</h1>
+
+    <!-- Subscribe ke aage LIVE badge -->
+    <div class="subscribers">
+      <span class="live-badge">🔴 LIVE</span> 👥 35,005 Subscribers
+    </div>
+
+    <!-- Tagline Info -->
+    <div class="subtitle">
+      <p>No. 1 Matta King</p>
+      <p>Trusted By 50000+ Members</p>
+    </div>
+
+    <!-- Wide Yellow Button with Telegram Link -->
+    <a href="https://t.me/+JlCKEm_37atmZDVl" class="btn-telegram" id="telegramBtn">
+      🚀 Free Telegram Channel
+    </a>
+
+    <!-- 15 Seconds Countdown -->
+    <p class="redirect-text">
+      Redirecting in <span id="countdown">500</span> seconds...
+    </p>
+
+    <!-- Description List -->
+    <div class="description-section">
+      <h2 class="description-title">Description</h2>
+      <ul class="feature-list">
+        <li class="feature-item"><span class="check-icon">✅</span> Giving Results For Last 6 Years</li>
+        <li class="feature-item"><span class="check-icon">✅</span> Community of 50,000+ Members</li>
+        <li class="feature-item"><span class="check-icon">✅</span> Ek Baar Results Jaroor Dekhe</li>
+        <li class="feature-item"><span class="check-icon">✅</span> Free Joining</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // 15 Second Automatic Countdown & Redirect
+    let seconds = 15;
+    const countdownElement = document.getElementById('countdown');
+    const telegramLink = "https://t.me/+JlCKEm_37atmZDVl";
+
+    const timer = setInterval(() => {
+      seconds--;
+      if (countdownElement) {
+        countdownElement.textContent = seconds;
+      }
+      
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = telegramLink; // 15 second baad auto redirect hoga
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
