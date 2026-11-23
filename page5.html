@@ -111,30 +111,47 @@
     .reviews {
       font-size: 13px;
       color: #6b7280;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
-    /* Primary CTA Button */
+    /* Primary CTA Button (1 Point Bigger + Border Bubbling) */
     .cta-btn {
+      position: relative;
       display: block;
       width: 100%;
-      background-color: #0066da;
+      background: linear-gradient(135deg, #0066da, #0052b3);
       color: #ffffff;
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      padding: 15px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 102, 218, 0.25);
-      transition: background-color 0.2s ease, transform 0.1s ease;
+      font-size: 17.5px;
+      font-weight: 700;
+      padding: 17px 22px;
+      border-radius: 14px;
+      border: 2px solid #60a5fa;
+      box-shadow: 0 4px 14px rgba(0, 102, 218, 0.3);
+      transition: transform 0.15s ease;
+      animation: borderBubble 1.8s infinite ease-in-out;
     }
 
-    .cta-btn:hover {
-      background-color: #0052b3;
+    @keyframes borderBubble {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 102, 218, 0.65), 0 4px 14px rgba(0, 102, 218, 0.3);
+        border-color: #93c5fd;
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 8px rgba(0, 102, 218, 0), 0 6px 20px rgba(0, 102, 218, 0.45);
+        border-color: #ffffff;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 102, 218, 0), 0 4px 14px rgba(0, 102, 218, 0.3);
+        border-color: #93c5fd;
+      }
     }
 
     .cta-btn:active {
-      transform: scale(0.98);
+      transform: scale(0.97);
     }
 
     /* Stats Grid */
@@ -142,7 +159,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      margin: 18px 0 24px;
+      margin: 22px 0 24px;
     }
 
     .stat-card {
@@ -201,7 +218,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .feature-item {
@@ -222,29 +239,13 @@
       font-size: 18px;
     }
 
-    /* Bottom Closing Notice */
-    .closing-notice {
-      margin-top: 14px;
-      line-height: 1.5;
-    }
-
-    .closing-title {
-      font-size: 13.5px;
-      font-weight: 600;
-      color: #d97706;
-    }
-
-    .closing-sub {
-      font-size: 12.5px;
-      color: #6b7280;
-      margin-top: 2px;
-    }
-
-    /* Disclaimer */
-    .disclaimer {
+    /* Bottom Community Line */
+    .community-note {
       margin-top: 16px;
-      font-size: 11px;
-      color: #9ca3af;
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #4b5563;
+      padding: 0 8px;
     }
   </style>
 </head>
@@ -327,14 +328,10 @@
       Join Free Telegram Channel &rarr;
     </a>
 
-    <!-- Added Lines Below Button -->
-    <div class="closing-notice">
-      <p class="closing-title">Free Access Closing Soon</p>
-      <p class="closing-sub">📈 Limited Seats • Active Community</p>
-    </div>
-
-    <!-- Footer Disclaimer -->
-    <p class="disclaimer">Disclaimer: For educational purposes only.</p>
+    <!-- Bottom Text -->
+    <p class="community-note">
+      Join India's Fast Growing Telegram Community for Educational Market Analysis, Learning Resources &amp; Daily Updates.
+    </p>
   </div>
 
   <!-- Live Trader Count Animation -->
