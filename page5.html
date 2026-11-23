@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gautam Kumar Jha (King of Nifty) - Stock Market Channel</title>
+
+  <!-- ========================================== -->
+  <!-- META PIXEL CODE YAHAN PASTE KAREIN (START) -->
+  
+  
+
+  <!-- META PIXEL CODE YAHAN PASTE KAREIN (END)   -->
+  <!-- ========================================== -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7f9;
+      display: flex;
+      justify-content: center;
+      padding: 20px 14px;
+      color: #1a1a1a;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+    }
+
+    /* Live Status Pill */
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #e6f7ed;
+      color: #169c49;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #169c49;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Profile Avatar */
+    .profile-pic {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+      margin-bottom: 14px;
+      background-color: #222;
+    }
+
+    /* Title & Subtitle */
+    h1 {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      color: #111827;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .king-tag {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1f2937;
+      margin-top: 2px;
+    }
+
+    .subtitle {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #0265dc;
+      margin-bottom: 8px;
+    }
+
+    /* Rating */
+    .stars {
+      color: #f59e0b;
+      font-size: 17px;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    .reviews {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    /* Primary CTA Button */
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background-color: #0066da;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 102, 218, 0.25);
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #0052b3;
+    }
+
+    .cta-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 18px 0 24px;
+    }
+
+    .stat-card {
+      background-color: #ffffff;
+      padding: 14px 8px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .stat-value {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0066da;
+      margin-bottom: 3px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+
+    /* Promo Heading */
+    .promo-title {
+      font-size: 17.5px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #1f2937;
+      margin-bottom: 6px;
+    }
+
+    .promo-title span {
+      color: #0066da;
+    }
+
+    .promo-desc {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+
+    /* Limited Access Pill */
+    .limited-badge {
+      display: block;
+      background-color: #fdf2e6;
+      color: #d97706;
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 50px;
+      margin-bottom: 18px;
+    }
+
+    /* Feature List */
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .feature-item {
+      background-color: #ffffff;
+      padding: 14px 16px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #1f2937;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      text-align: left;
+    }
+
+    .feature-icon {
+      font-size: 18px;
+    }
+
+    /* Bottom Closing Notice */
+    .closing-notice {
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+
+    .closing-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #d97706;
+    }
+
+    .closing-sub {
+      font-size: 12.5px;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      margin-top: 16px;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Live Traders Badge -->
+    <div class="live-badge">
+      <span class="live-dot"></span>
+      <span id="live-count">5,947</span> Traders Online Now
+    </div>
+
+    <!-- Profile Picture -->
+    <div>
+      <img src="IMG_20261123_184302_601.jpg" alt="Gautam Kumar Jha" class="profile-pic" />
+    </div>
+
+    <!-- Name & Tagline -->
+    <h1>
+      GAUTAM KUMAR JHA
+      <span class="king-tag">( KING OF NIFTY )</span>
+    </h1>
+    <p class="subtitle">🏆 India's No.1 Stock Market Channel</p>
+
+    <!-- Ratings -->
+    <div class="stars">★★★★★</div>
+    <p class="reviews">4.9/5 (2340 Reviews)</p>
+
+    <!-- Top Telegram Button -->
+    <a href="https://t.me/+qEokwh0D-WlkNzJl" target="_blank" class="cta-btn">
+      Join Free Telegram Channel &rarr;
+    </a>
+
+    <!-- 3 Column Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">50K+</div>
+        <div class="stat-label">Members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">5+</div>
+        <div class="stat-label">Years</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">95%</div>
+        <div class="stat-label">Accuracy</div>
+      </div>
+    </div>
+
+    <!-- Calls Section -->
+    <h2 class="promo-title">
+      Get <span>FREE Daily Calls</span><br />
+      for NIFTY, BANKNIFTY &amp; SENSEX
+    </h2>
+    <p class="promo-desc">Join thousands of traders getting daily market analysis</p>
+
+    <!-- Limited Access Banner -->
+    <div class="limited-badge">
+      🔥 Limited FREE Access Available
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="features">
+      <div class="feature-item">
+        <span class="feature-icon">📊</span>
+        <span>Daily Nifty &amp; BankNifty Levels</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🎓</span>
+        <span>Educational Market Analysis</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">👥</span>
+        <span>50,000+ Subscribers Community</span>
+      </div>
+    </div>
+
+    <!-- Bottom Telegram Button -->
+    <a href="https://t.me/+qEokwh0D-WlkNzJl" target="_blank" class="cta-btn">
+      Join Free Telegram Channel &rarr;
+    </a>
+
+    <!-- Added Lines Below Button -->
+    <div class="closing-notice">
+      <p class="closing-title">Free Access Closing Soon</p>
+      <p class="closing-sub">📈 Limited Seats • Active Community</p>
+    </div>
+
+    <!-- Footer Disclaimer -->
+    <p class="disclaimer">Disclaimer: For educational purposes only.</p>
+  </div>
+
+  <!-- Live Trader Count Animation -->
+  <script>
+    const countEl = document.getElementById('live-count');
+    let count = 5947;
+    setInterval(() => {
+      const change = Math.floor(Math.random() * 7) - 3;
+      count += change;
+      countEl.textContent = count.toLocaleString();
+    }, 3000);
+  </script>
+
+</body>
+</html>
